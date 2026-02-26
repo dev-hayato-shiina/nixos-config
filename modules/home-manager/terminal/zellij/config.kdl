@@ -1,0 +1,18 @@
+theme "tokyo-night-dark"
+default_shell "zsh"
+
+themes {
+    tokyo-night-dark {
+        bg 0 0 0
+        fg 169 177 214
+        red 255 117 127
+        green 158 206 106
+        yellow 224 175 104
+        blue 122 162 247
+        magenta 187 154 247
+        cyan 125 207 255
+        white 192 202 245
+        black 26 27 38
+        orange 255 158 100
+    }
+}
