@@ -1,6 +1,15 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
+  # システム全体で利用可能なパッケージをインストールする
+  environment.systemPackages = with pkgs; [
+    sops
+    age
+    unzip
+    jq
+    tree
+  ];
+
   # ユーザー管理を NixOS の宣言的設定のみに限定する
   # true（デフォルト）の場合、passwd コマンド等による命令的な変更が可能だが
   # false にすることで設定ファイル外からのユーザー変更を禁止し、冪等性を保証する
