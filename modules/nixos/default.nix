@@ -25,6 +25,7 @@ in
     ./system/tailscale   # Tailscale VPN 設定
     ./system/docker      # Docker 設定
     ./system/flatpak     # Flatpak 設定
+    ./system/sops
 
     # --- system/wm: ウィンドウマネージャー・デスクトップ環境 ---
     ./system/wm/niri                        # Niri（タイリングWM）設定
@@ -34,7 +35,7 @@ in
     ./system/wm/wofi                        # アプリケーションランチャー設定
 
     # --- system/user: ユーザー個別設定 ---
-    ./system/user/hayato-shiina.nix
+    ./system/user
 
     # --- flatpak: Flatpak アプリケーション設定 ---
     ./flatpak/app/discord.nix  # Discord
