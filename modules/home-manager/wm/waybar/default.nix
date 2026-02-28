@@ -77,7 +77,7 @@
         # Discord ボタン: クリックで起動通知を表示しつつ DISPLAY=:1（XWayland）で Discord を起動する
         "custom/discord" = {
           format = "💬";
-          on-click = "notify-send -t 3000 -i discord 'Discord' '起動中...' & env DISPLAY=:1 ${pkgs.flatpak}/bin/flatpak run com.discordapp.Discord";
+          on-click = "notify-send -t 3000 -i discord 'Discord' '起動中...' & env DISPLAY=:1 TZ=Asia/Tokyo ${pkgs.flatpak}/bin/flatpak run com.discordapp.Discord --env=TZ=Asia/Tokyo";
           tooltip-format = "Discord";
         };
 

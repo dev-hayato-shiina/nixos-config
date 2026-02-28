@@ -26,3 +26,7 @@ nix-repl> :p nixosConfigurations
 ```
 
 - `Ctrl + l` でクリアできる
+
+## Neovim Plugins
+
+https://github.com/rockerBOO/awesome-neovim

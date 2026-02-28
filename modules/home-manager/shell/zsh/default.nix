@@ -31,6 +31,8 @@
       "......"   = "cd ../../..";
       "........" = "cd ../../../..";
 
+      rebuild = ''sudo nixos-rebuild switch --flake "path:/etc/nixos#$(hostname)"'';
+
       grep = "rg"; # grep を ripgrep に置き換える
 
       # Discord を DISPLAY=:1（xwayland-satellite 経由の X11）で起動する

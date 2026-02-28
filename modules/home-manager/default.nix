@@ -24,8 +24,6 @@ in
     ./tool/git.nix
   ];
 
-  myModules.editor.neovim.profile = userVars.neovimProfile;
-
   home = rec {
     username = userVars.username;
     homeDirectory = userVars.homeDirectory;

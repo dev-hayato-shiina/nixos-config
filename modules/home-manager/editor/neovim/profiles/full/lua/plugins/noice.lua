@@ -9,6 +9,7 @@ return {
       config = function()
         local Popup = require("nui.popup")
         local command_list = [[
+
 q - コマンドリストを閉じる
 
 <Leader> - <Space>
@@ -35,6 +36,12 @@ Normal mode, LazyDockerが表示された状態で、q - LazyDockerを非表示
   LazyDockerがインストールされていること（https://github.com/jesseduffield/lazydocker?tab=readme-ov-file#binary-release-linuxosxwindows）
 
 Normal mode, f - HopWordを実行
+
+Normal mode, 中クリック - カーソル追加
+Normal mode, Ctrl + Alt + Up - 上にカーソル追加
+Normal mode, Ctrl + Alt + Down - 下にカーソル追加
+Normal mode, <Esc><Esc><Esc> - マルチカーソル解除
+
 ]]
         local function show_commands()
           local popup = Popup({

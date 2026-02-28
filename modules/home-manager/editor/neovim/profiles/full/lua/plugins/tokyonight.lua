@@ -9,15 +9,21 @@ return {
       floats = "transparent"
     },
     on_highlights = function(hl, c)
+      -- コマンドラインで highlight で Enter を押下することで、詳細確認可能
+      -- :filter /^Neo/ highlight
+
+      -- Line
+      hl.LineNr = { fg = "#828bb8", bold = true }
+
       -- CursorLine
       hl.CursorLine = { bg = "NONE" }
       hl.CursorLineNr = { fg = c.orange, bold = true }
 
-      -- lualine
-      hl.StatusLine = { bg = "NONE" }
-      hl.StatusLineNC = { bg = "NONE" }
+      -- Neo-tree.nvim
+      hl.NeoTreeNormal = { bg = "NONE" }
+      hl.NeoTreeNormalNC = { bg = "NONE" }
 
-      -- barbar
+      -- barbar.nvim
       hl.BufferCurrent = { bg = "NONE", bold = true }
       hl.BufferCurrentSign = { bg = "NONE" }
       hl.BufferCurrentMod = { bg = "NONE" }
@@ -28,14 +34,11 @@ return {
       hl.BufferVisibleSign = { bg = "NONE" }
       hl.BufferTabpages = { bg = "NONE" }
       hl.BufferTabpageFill = { bg = "NONE" }
+      hl.BufferOffset = { bg = "NONE" }
 
-      -- neotree
-      hl.NeoTreeNormal = { bg = "NONE" }
-      hl.NeoTreeNormalNC = { bg = "NONE" }
-      hl.NeoTreeWinBar = { bg = "NONE" }          -- 上の横棒
-      hl.NeoTreeEndOfBuffer = { bg = "NONE" }     -- 下の余白（~ の部分）
-      hl.NeoTreeStatusLine = { bg = "NONE" }      -- ステータスライン
-      hl.NeoTreeStatusLineNC = { bg = "NONE" }
+      -- lualine.nvim
+      hl.StatusLine = { bg = "NONE" }
+      hl.StatusLineNC = { bg = "NONE" }
     end
   }
 }
