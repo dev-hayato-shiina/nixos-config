@@ -9,9 +9,13 @@ OUTPUT_FILE="${TIMESTAMP}.txt"
   tree -a -I ".git"
   find . -type f \
     ! -name "copy.sh" \
+    ! -name "add_user_password.sh" \
+    ! -name "setup_ssh_key.sh" \
     ! -name "*.txt" \
+    ! -path "./ssh/*" \
     ! -name "*.bak" \
     ! -path "./.git/*" \
+    ! -name ".gitignore" \
     ! -name "*.lock" \
     ! -name "*.jpg" \
     ! -name "*.png" \
