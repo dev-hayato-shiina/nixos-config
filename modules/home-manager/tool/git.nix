@@ -1,20 +1,12 @@
-{pkgs, ...}:
+{ pkgs, ... }:
 
 {
+  # Git の基本設定を行う
   programs.git = {
     enable = true;
     settings = {
-      user.name = "dev-hayato-shiina";
-      user.email = "dev.hayato.shiina@gmail.com";
+      user.name = "dev-hayato-shiina";            # コミット時に使用するユーザー名
+      user.email = "dev.hayato.shiina@gmail.com"; # コミット時に使用するメールアドレス
     };
   };
-
-  # GitHub CLI
-  # programs.gh = {
-  #   enable = true;
-  #   extensions = with pkgs; [gh-markdown-preview]; # オススメ
-  #   settings = {
-  #     editor = "nvim";
-  #   };
-  # };
 }

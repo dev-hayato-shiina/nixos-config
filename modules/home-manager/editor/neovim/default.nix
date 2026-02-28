@@ -1,25 +1,48 @@
-{
-  config,
-  pkgs,
-  lib,
-  neovimProfile,
-  ...
-}:
+{ config, lib, pkgs, ... }:
 
 let
-  profilePath = ./profiles/${neovimProfile};
-  profilePackages = import "${profilePath}/package.nix" { inherit pkgs; };
+  # myModules.editor.neovim のオプションを参照するエイリアス
+  cfg = config.myModules.editor.neovim;
+
+  # 使用するプロファイルのディレクトリパス（full / minimal）
+  profilePath = ./profiles/${cfg.profile};
 in
 {
-  imports = [ profilePackages ];
-
-  xdg.configFile."nvim/init.lua" = {
-    force = true;
-    source = "${profilePath}/init.lua";
+  options.myModules.editor.neovim = {
+    # 使用するプロファイルを選択する（full: フル装備 / minimal: 最小構成）
+    profile = lib.mkOption {
+      type = lib.types.enum [ "full" "minimal" ];
+      default = "minimal";
+      description = "neovim の設定プロファイル";
+    };
   };
 
-  xdg.configFile."nvim/lua" = {
-    force = true;
-    source = "${profilePath}/lua";
+  config = {
+    # GUI ツール群
+    home.packages = with pkgs; [
+      lazygit
+      lazydocker
+    ];
+
+    programs.neovim = {
+      # neovim から呼び出す外部コマンド
+      extraPackages = with pkgs; [
+        ripgrep
+      ];
+    };
+
+    xdg.configFile = {
+      # プロファイルの init.lua をエントリポイントとして配置する
+      "nvim/init.lua" = {
+        force = true;
+        source = "${profilePath}/init.lua";
+      };
+
+      # プロファイルの lua/ 以下をまるごと配置する
+      "nvim/lua" = {
+        force = true;
+        source = "${profilePath}/lua";
+      };
+    };
   };
 }

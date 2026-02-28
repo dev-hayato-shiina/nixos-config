@@ -2,10 +2,10 @@
 
 {
   home.packages = with pkgs; [
-    pkgs.totem # ビデオプレーヤー
-    pkgs.evince # PDFビューアー
-    parsec-bin # 超速いリモートデスクトップクライアント
-    remmina # VNCクライアント
-    ripgrep
+    totem      # ビデオプレーヤー
+    evince     # PDF ビューアー
+    parsec-bin # 超低遅延のリモートデスクトップクライアント
+    remmina    # RDP / VNC クライアント
+    ripgrep    # 高速なテキスト検索ツール（grep の代替）
   ];
 }
