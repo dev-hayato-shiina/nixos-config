@@ -9,7 +9,8 @@
       # 起動時に zsh 経由で Zellij（ターミナルマルチプレクサ）を自動起動する
       terminal.shell = {
         program = "${pkgs.zsh}/bin/zsh";
-        args = [ "-c" "zellij" ];
+        # TODO: も
+        # args = [ "-c" "zellij" ];
       };
 
       window = {

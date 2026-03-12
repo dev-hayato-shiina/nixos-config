@@ -8,6 +8,7 @@
     unzip
     jq
     tree
+    direnv
   ];
 
   # ユーザー管理を NixOS の宣言的設定のみに限定する

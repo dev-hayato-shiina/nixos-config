@@ -1,5 +1,7 @@
 export LANG=en_US.UTF-8
 
+eval "$(direnv hook zsh)"
+
 # ZINITのプラグイン保存先を設定
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 

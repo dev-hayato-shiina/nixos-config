@@ -37,7 +37,7 @@
 
       # Discord を DISPLAY=:1（xwayland-satellite 経由の X11）で起動する
       # Flatpak パーミッションの設定は modules/nix/flatpak/app/discord.nix を参照
-      discord = "DISPLAY=:1 flatpak run com.discordapp.Discord";
+      discord = "env DISPLAY=:1 TZ=Asia/Tokyo flatpak run com.discordapp.Discord --env=TZ=Asia/Tokyo";
     };
 
     # .zshrc の内容を同ディレクトリのファイルから読み込んで適用する
