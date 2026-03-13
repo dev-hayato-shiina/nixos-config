@@ -1,5 +1,0 @@
-require("config.lazy")
-require("base")
-require("option")
-require("keymap")
-require("autocmd")

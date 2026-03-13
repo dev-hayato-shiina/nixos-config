@@ -17,4 +17,6 @@
     viAlias = false;      # vi コマンドを Neovim のエイリアスにしない
     vimAlias = false;     # vim コマンドを Neovim のエイリアスにしない
   };
+
+  programs.nix-ld.enable = true;
 }

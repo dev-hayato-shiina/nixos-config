@@ -15,8 +15,8 @@ in
     ./terminal/alacritty/default.nix
     ./terminal/zellij/default.nix
     ./shell/zsh/default.nix
-    ./editor/neovim/default.nix
     ./editor/vim/default.nix
+    ./editor/neovim/default.nix
     # ./app/core.nix
     ./app/bitwarden.nix
     # ./app/firefox.nix
