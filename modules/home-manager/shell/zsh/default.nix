@@ -31,7 +31,9 @@
       "......"   = "cd ../../..";
       "........" = "cd ../../../..";
 
-      rebuild = ''sudo nixos-rebuild switch --flake "path:/etc/nixos#$(hostname)"'';
+      rebuild = ''sudo nixos-rebuild switch --flake "path:/etc/nixos#agate"'';
+
+      gc-clear = "sudo nix-collect-garbage -d";
 
       grep = "rg"; # grep を ripgrep に置き換える
 
