@@ -5,6 +5,7 @@
   environment.systemPackages = with pkgs; [
     vim-full    # Vim（全機能版）
     wl-clipboard # Wayland向けクリップボードユーティリティ（wl-copy / wl-paste）
+    helix
   ];
 
   # Vim をシステムレベルで有効化する

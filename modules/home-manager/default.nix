@@ -17,6 +17,7 @@ in
     ./shell/zsh/default.nix
     ./editor/vim/default.nix
     ./editor/neovim/default.nix
+    ./editor/zed/default.nix
     # ./app/core.nix
     ./app/bitwarden.nix
     # ./app/firefox.nix
