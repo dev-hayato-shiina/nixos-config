@@ -13,5 +13,9 @@
     extraPackages = with pkgs; [
       lua-language-server
     ];
+
+    plugins = with pkgs.vimPlugins; [
+      blink-cmp
+    ];
   };
 }
