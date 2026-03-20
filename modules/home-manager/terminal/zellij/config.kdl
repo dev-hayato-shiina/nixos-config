@@ -1,6 +1,4 @@
 theme "tokyo-night-dark"
-default_shell "zsh"
-
 themes {
     tokyo-night-dark {
         bg 0 0 0
@@ -14,5 +12,21 @@ themes {
         white 192 202 245
         black 26 27 38
         orange 255 158 100
+    }
+}
+default_shell "zsh"
+simplified_ui true
+copy_command "wl-copy"
+copy_clipboard "primary"
+ui {
+    pane_frames {
+        rounded_corners true
+    }
+}
+show_startup_tips false
+pane_frames false
+layout {
+    default_tab_template {
+        children
     }
 }

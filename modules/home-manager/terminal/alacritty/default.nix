@@ -20,7 +20,7 @@
           x = 5; # 左右の内側余白（px）
           y = 5; # 上下の内側余白（px）
         };
-        opacity = 0.85; # ウィンドウの不透明度（0.0: 完全透明 〜 1.0: 完全不透明）
+        # opacity = 0.85; # ウィンドウの不透明度（0.0: 完全透明 〜 1.0: 完全不透明）
       };
 
       font = {
@@ -31,7 +31,7 @@
       # カラーテーマ（Tokyo Night Moon ベース）
       colors = {
         primary = {
-          background = "#222436"; # 背景色
+          background = "#282c34"; # 背景色
           foreground = "#c8d3f5"; # 前景色（通常テキスト）
         };
         normal = {

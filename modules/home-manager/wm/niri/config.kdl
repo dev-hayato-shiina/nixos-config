@@ -16,7 +16,7 @@ layout {
   gaps 5
   focus-ring {
     width 3
-    active-color "rgba(50, 160, 250, 0.5)"
+    active-color "rgba(50, 160, 250, 1)"
     inactive-color "#00000000"
   }
 }
