@@ -22,13 +22,15 @@
 
     # Flatpakアプリをnix管理下に置くためのモジュール
     nix-flatpak.url = "github:gmodena/nix-flatpak";
+
+    zjstatus.url = "github:dj95/zjstatus";
   };
 
   # ==============================================================
   # outputs: このflakeが外部に公開する成果物を定義する
   # inputs から受け取った各リポジトリをここで使用する
   # ==============================================================
-  outputs = { self, nixpkgs, sops-nix, home-manager, nix-flatpak }:
+  outputs = { self, nixpkgs, sops-nix, home-manager, nix-flatpak, zjstatus }:
     let
       # ビルドターゲットのCPUアーキテクチャ
       system = "x86_64-linux";
@@ -62,6 +64,12 @@
       pkgs = import nixpkgs {
         inherit system;
         config.allowUnfree = true;
+
+        overlays = [
+          (final: prev: {
+            zjstatus = zjstatus.packages.${system}.default;
+          })
+        ];
       };
 
       # users/ 以下のディレクトリを自動検出してすべてのユーザー定数を読み込む
@@ -78,6 +86,15 @@
 
         modules = [
           ./hosts/${hostName}/configuration.nix
+
+          {
+            nixpkgs.overlays = [
+              (final: prev: {
+                zjstatus = zjstatus.packages.${system}.default;
+              })
+            ];
+          }
+
           sops-nix.nixosModules.sops
           nix-flatpak.nixosModules.nix-flatpak
           home-manager.nixosModules.home-manager {
