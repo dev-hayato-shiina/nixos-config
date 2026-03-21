@@ -18,6 +18,7 @@ in
     ./editor/vim/default.nix
     ./editor/neovim/default.nix
     ./editor/zed/default.nix
+    ./editor/vscode/default.nix
     # ./app/core.nix
     ./app/bitwarden.nix
     # ./app/firefox.nix
