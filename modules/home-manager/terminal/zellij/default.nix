@@ -34,7 +34,7 @@ in
                 plugin location="file://${pkgs.zjstatus}/bin/zjstatus.wasm" {
                     format_left   "{mode}#[bg=#${bg}] {tabs}"
                     format_center ""
-                    format_right  "#[bg=#${bg},fg=#${blue}]#[bg=#${blue},fg=#${bg},bold]  #[bg=#${surface},fg=#${white},bold] {session} #[bg=#${surface1},fg=#${fg}]"
+                    format_right  "#[bg=#${bg},fg=#${blue}]#[bg=#${blue},fg=#${bg},bold]   #[bg=#${surface},fg=#${white},bold] {session} #[bg=#${surface1},fg=#${fg}]"
                     format_space  ""
                     format_hide_on_overlength "true"
                     format_precedence "crl"
