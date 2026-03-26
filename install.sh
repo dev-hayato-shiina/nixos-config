@@ -56,7 +56,7 @@ touch /mnt/var/lib/sops/age/keys.txt
 vim /mnt/var/lib/sops/age/keys.txt
 
 # flakeを使ってインストール
-nixos-install --flake .#agate
+# nixos-install --flake .#agate
 
 # シャットダウン
-shutdown -h now
+# shutdown -h now
