@@ -55,8 +55,11 @@ mkdir -p /mnt/var/lib/sops/age
 touch /mnt/var/lib/sops/age/keys.txt
 vim /mnt/var/lib/sops/age/keys.txt
 
+cd /mnt/etc/nixos
+rm /root/install.sh
+
 # flakeを使ってインストール
-# nixos-install --flake .#agate
+nixos-install --flake .#agate
 
 # シャットダウン
-# shutdown -h now
+shutdown -h now
