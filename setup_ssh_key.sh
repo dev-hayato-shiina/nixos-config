@@ -10,11 +10,13 @@ BW_ITEM_ID_SHEENA_DEVELOP="92ade4ad-1253-4345-aaf6-b3ff0131ce58"
 
 # Bitwarden セッション確認
 if [[ -z "$BW_SESSION" ]]; then
-  echo "Bitwarden にログインしてください"
+  echo "Bitwardenのセッション情報を取得します"
   export BW_SESSION=$(bw unlock --raw)
   if [[ -z "$BW_SESSION" ]]; then
-    echo "ログインに失敗しました"
-    exit 1
+    echo "ログインをしてください"
+    bw login
+    echo "Bitwardenのセッション情報を取得します"
+    export BW_SESSION=$(bw unlock --raw)
   fi
 fi
 
@@ -43,6 +45,9 @@ echo "秘密鍵を配置しました: $KEY_PATH_DEV_HAYATO_SHIINA"
 # 動作確認
 ssh -T dev-hayato-shiina
 
+# パスフレーズのポップアップが表示されず、止まってしまう場合は、以下のコマンドでパスフレーズを空にして、再実行してください。
+# ssh-keygen -p -f ~/.ssh/dev-hayato-shiina-key
+
 # =========================
 
 # === sheena-develop ===
@@ -65,5 +70,8 @@ echo "秘密鍵を配置しました: $KEY_PATH_SHEENA_DEVELOP"
 
 # 動作確認
 ssh -T sheena-develop
+
+# パスフレーズのポップアップが表示されず、止まってしまう場合は、以下のコマンドでパスフレーズを空にして、再実行してください。
+# ssh-keygen -p -f ~/.ssh/sheena-develop-key
 
 # ======================
