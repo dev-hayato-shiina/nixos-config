@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
-set -euo pipefail
 
 # Rootユーザーに切り替える
-sudo -i
+# sudo -i
 
 # キーボードのレイアウトをjp106に変更する
-loadkeys jp106
+# loadkeys jp106
+
+# curl -O https://raw.githubusercontent.com/dev-hayato-shiina/nixos-config/main/install.sh
 
 # ディスク領域を確認する
 lsblk -l
@@ -55,5 +56,5 @@ vim /mnt/var/lib/sops/age/keys.txt
 # flakeを使ってインストール
 nixos-install --flake .#agate
 
-# 再起動
-reboot
+# シャットダウン
+shutdown -h now
