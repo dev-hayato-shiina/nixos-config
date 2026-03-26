@@ -45,8 +45,10 @@ swapon /dev/disk/by-label/swap
 nixos-generate-config --root /mnt
 
 rm /mnt/etc/nixos/configuration.nix
+mv /mnt/etc/nixos/hardware-configuration.nix /mnt/etc/
+git clone https://github.com/dev-hayato-shiina/nixos-config.git /mnt/etc/nixos/.
 rm /mnt/etc/nixos/hosts/agate/hardware-configuration.nix
-mv /mnt/etc/nixos/hardware-configuration.nix /mnt/etc/nixos/hosts/agate/
+mv /mnt/etc/hardware-configuration.nix /mnt/etc/nixos/hosts/agate/
 
 # keys.txtの作成・編集（保存して閉じたら次へ進む）
 mkdir -p /mnt/var/lib/sops/age
