@@ -25,8 +25,3 @@ ui {
 }
 show_startup_tips false
 pane_frames false
-layout {
-    default_tab_template {
-        children
-    }
-}
