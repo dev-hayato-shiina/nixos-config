@@ -24,13 +24,18 @@
     nix-flatpak.url = "github:gmodena/nix-flatpak";
 
     zjstatus.url = "github:dj95/zjstatus";
+
+    nvim = {
+      url = "github:dev-hayato-shiina/nix-configs?dir=neovim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   # ==============================================================
   # outputs: このflakeが外部に公開する成果物を定義する
   # inputs から受け取った各リポジトリをここで使用する
   # ==============================================================
-  outputs = { self, nixpkgs, sops-nix, home-manager, nix-flatpak, zjstatus }:
+  outputs = { self, nixpkgs, sops-nix, home-manager, nix-flatpak, zjstatus, nvim }:
     let
       # ビルドターゲットのCPUアーキテクチャ
       system = "x86_64-linux";
@@ -82,10 +87,11 @@
         inherit system;
 
         # NixOS モジュール側に allUsers を渡す
-        specialArgs = { inherit allUsers; };
+        specialArgs = { inherit allUsers nvim; };
 
         modules = [
           ./hosts/${hostName}/configuration.nix
+          nvim.nixosModules.default
 
           {
             nixpkgs.overlays = [

@@ -13,12 +13,7 @@
   programs.vim.enable = true;
 
   # Neovim をシステムレベルで有効化する
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true; # デフォルトエディタ（$EDITOR）を Neovim に設定する
-    viAlias = false;      # vi コマンドを Neovim のエイリアスにしない
-    vimAlias = false;     # vim コマンドを Neovim のエイリアスにしない
-  };
+  wrappers.neovim.enable = true;
 
-  programs.nix-ld.enable = true;
+  environment.variables.EDITOR = "nvim";
 }
