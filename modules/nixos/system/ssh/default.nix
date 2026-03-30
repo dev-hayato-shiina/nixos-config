@@ -10,5 +10,7 @@
 
     # root ユーザーによる SSH ログインを禁止する
     settings.PermitRootLogin = "no";
+
+    ports = [2222];
   };
 }
