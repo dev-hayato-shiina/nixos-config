@@ -54,6 +54,7 @@ mv /mnt/etc/hardware-configuration.nix /mnt/etc/nixos/hosts/agate/
 mkdir -p /mnt/var/lib/sops/age
 touch /mnt/var/lib/sops/age/keys.txt
 vim /mnt/var/lib/sops/age/keys.txt
+chmod 600 /mnt/var/lib/sops/age/keys.txt
 
 cd /mnt/etc/nixos
 rm /root/install.sh
