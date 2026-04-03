@@ -1,2 +1,2 @@
-{ inputs, system, ... }:
-inputs.zjstatus.packages.${system}.default
+{ inputs, pkgs, ... }:
+inputs.zjstatus.packages.${pkgs.stdenv.hostPlatform.system}.default
