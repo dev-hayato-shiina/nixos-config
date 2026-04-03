@@ -6,7 +6,7 @@
     ./zellij
     ./bitwarden.nix
     ./chrome.nix
-    ./discord.nix # Flatpak
+    ./cursor.nix
     ./git.nix
     ./helix.nix
     ./swaybg.nix
