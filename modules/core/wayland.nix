@@ -27,7 +27,10 @@
         Name=Niri
         Exec=niri
         Type=Application
-      '')
+      '').overrideAttrs
+      (old: {
+        passthru.providedSessions = [ "niri" ];
+      })
     ];
   };
 
