@@ -22,15 +22,17 @@
     gdm.enable = true;
     defaultSession = "niri";
     sessionPackages = [
-      (pkgs.writeTextDir "share/wayland-sessions/niri.desktop" ''
-        [Desktop Entry]
-        Name=Niri
-        Exec=niri
-        Type=Application
-      '').overrideAttrs
-      (old: {
-        passthru.providedSessions = [ "niri" ];
-      })
+      (
+        (pkgs.writeTextDir "share/wayland-sessions/niri.desktop" ''
+          [Desktop Entry]
+          Name=Niri
+          Exec=niri
+          Type=Application
+        '').overrideAttrs
+        (_: {
+          passthru.providedSessions = [ "niri" ];
+        })
+      )
     ];
   };
 
