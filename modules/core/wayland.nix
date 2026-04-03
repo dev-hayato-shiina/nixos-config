@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   # programs.hyprland = {
   #   enable = true;
@@ -21,6 +21,14 @@
   services.displayManager = {
     gdm.enable = true;
     defaultSession = "niri";
+    sessionPackages = [
+      (pkgs.writeTextDir "share/wayland-sessions/niri.desktop" ''
+        [Desktop Entry]
+        Name=Niri
+        Exec=niri
+        Type=Application
+      '')
+    ];
   };
 
   # Electron アプリを Wayland ネイティブで動かす
