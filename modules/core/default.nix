@@ -11,7 +11,7 @@
     ./network.nix
     ./nixpkgs.nix
     ./pipewire.nix
-    # ./programs.nix
+    ./programs.nix
     ./security.nix
     ./services.nix
     ./sops.nix
