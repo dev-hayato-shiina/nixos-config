@@ -1,0 +1,4 @@
+{ ... }:
+{
+  wrappers.waybar.enable = true;
+}

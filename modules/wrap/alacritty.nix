@@ -1,0 +1,4 @@
+{ ... }:
+{
+  wrappers.alacritty.enable = true;
+}

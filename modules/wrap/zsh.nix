@@ -1,0 +1,4 @@
+{ ... }:
+{
+  wrappers.zsh.enable = true;
+}

@@ -1,0 +1,4 @@
+{ ... }:
+{
+  wrappers.niri.enable = true;
+}

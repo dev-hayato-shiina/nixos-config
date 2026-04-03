@@ -1,0 +1,24 @@
+{ ... }:
+{
+  imports = [
+    ./bluetooth.nix
+    ./bootloader.nix
+    ./docker.nix
+    ./flatpak.nix
+    ./fonts.nix
+    # ./hardware.nix
+    ./i18n.nix
+    ./network.nix
+    ./nixpkgs.nix
+    ./pipewire.nix
+    # ./programs.nix
+    ./security.nix
+    ./services.nix
+    ./sops.nix
+    ./system.nix
+    ./user.nix
+    ./wayland.nix
+    ./xserver.nix
+    ./xwayland-satelite.nix
+  ];
+}
