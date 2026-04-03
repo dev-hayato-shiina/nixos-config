@@ -9,17 +9,20 @@ OUTPUT_FILE="${TIMESTAMP}.txt"
   tree -a -I ".git"
   find . -type f \
     ! -name "copy.sh" \
+    ! -name ".gitignore" \
+    ! -name ".sops.yaml" \
+    ! -name "README.md" \
     ! -name "add_user_password.sh" \
+    ! -name "flake.lock" \
+    ! -name "install.sh" \
     ! -name "setup_ssh_key.sh" \
     ! -name "*.txt" \
+    ! -name "./secrets/*.bak" \
+    ! -name "./secrets/secrets.yaml" \
     ! -path "./ssh/*" \
-    ! -name "*.bak" \
     ! -path "./.git/*" \
-    ! -name ".gitignore" \
-    ! -name "*.lock" \
     ! -name "*.jpg" \
     ! -name "*.png" \
-    ! -name "README.md" \
     -print0 |
   while IFS= read -r -d '' f; do
     printf '\n===== %s =====\n\n' "$f"
