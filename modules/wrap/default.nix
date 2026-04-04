@@ -1,10 +1,10 @@
 { ... }:
 {
   imports = [
-    ./alacritty.nix
+    # ./alacritty.nix
     ./neovim.nix
-    ./niri.nix
-    ./waybar.nix
-    ./zsh.nix
+    # ./niri.nix
+    # ./waybar.nix
+    # ./zsh.nix
   ];
 }

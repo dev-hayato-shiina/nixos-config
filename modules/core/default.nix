@@ -9,6 +9,7 @@
     # ./hardware.nix
     ./i18n.nix
     ./network.nix
+    ./niri.nix
     ./nixpkgs.nix
     ./pipewire.nix
     ./programs.nix

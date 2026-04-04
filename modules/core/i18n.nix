@@ -30,7 +30,14 @@
     };
   };
 
+  # waylandFrontend = true の場合 NixOS モジュールは GTK_IM_MODULE 等を設定しないため手動設定
+  # DISPLAY=:1 は xwayland-satellite が使用する display 番号
+  # fcitx5 の xcb addon が XWayland に接続するために必要
   environment.sessionVariables = {
-    XMODIFIERS = "@im=fcitx";
+    XMODIFIERS    = "@im=fcitx";
+    GTK_IM_MODULE = "fcitx";
+    QT_IM_MODULE  = "fcitx";
+    SDL_IM_MODULE = "fcitx";
+    DISPLAY       = ":1";
   };
 }

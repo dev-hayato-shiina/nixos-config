@@ -1,28 +1,5 @@
 {
   "nodes": {
-    "alacritty": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ],
-        "wrappers": "wrappers"
-      },
-      "locked": {
-        "dir": "alacritty",
-        "lastModified": 1775262440,
-        "narHash": "sha256-6Q90zAPfo9uYsk3/qaJnJ13R/VI8RFqZil+zCSNQgxQ=",
-        "owner": "dev-hayato-shiina",
-        "repo": "nix-configs",
-        "rev": "2f5906db5e789a243ef0d3b12dfdb620f3702632",
-        "type": "github"
-      },
-      "original": {
-        "dir": "alacritty",
-        "owner": "dev-hayato-shiina",
-        "repo": "nix-configs",
-        "type": "github"
-      }
-    },
     "crane": {
       "locked": {
         "lastModified": 1765739568,
@@ -73,29 +50,6 @@
       "original": {
         "owner": "nix-community",
         "repo": "home-manager",
-        "type": "github"
-      }
-    },
-    "niri": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ],
-        "wrappers": "wrappers_2"
-      },
-      "locked": {
-        "dir": "niri",
-        "lastModified": 1775262440,
-        "narHash": "sha256-6Q90zAPfo9uYsk3/qaJnJ13R/VI8RFqZil+zCSNQgxQ=",
-        "owner": "dev-hayato-shiina",
-        "repo": "nix-configs",
-        "rev": "2f5906db5e789a243ef0d3b12dfdb620f3702632",
-        "type": "github"
-      },
-      "original": {
-        "dir": "niri",
-        "owner": "dev-hayato-shiina",
-        "repo": "nix-configs",
         "type": "github"
       }
     },
@@ -172,7 +126,7 @@
         "plugins-lazydocker-nvim": "plugins-lazydocker-nvim",
         "plugins-lze": "plugins-lze",
         "plugins-lzextras": "plugins-lzextras",
-        "wrappers": "wrappers_3"
+        "wrappers": "wrappers"
       },
       "locked": {
         "dir": "neovim",
@@ -272,16 +226,12 @@
     },
     "root": {
       "inputs": {
-        "alacritty": "alacritty",
         "home-manager": "home-manager",
-        "niri": "niri",
         "nix-flatpak": "nix-flatpak",
         "nixpkgs": "nixpkgs",
         "nvim": "nvim",
         "sops-nix": "sops-nix",
-        "waybar": "waybar",
-        "zjstatus": "zjstatus",
-        "zsh": "zsh"
+        "zjstatus": "zjstatus"
       }
     },
     "rust-overlay": {
@@ -338,72 +288,7 @@
         "type": "github"
       }
     },
-    "waybar": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ],
-        "wrappers": "wrappers_4"
-      },
-      "locked": {
-        "dir": "waybar",
-        "lastModified": 1775262440,
-        "narHash": "sha256-6Q90zAPfo9uYsk3/qaJnJ13R/VI8RFqZil+zCSNQgxQ=",
-        "owner": "dev-hayato-shiina",
-        "repo": "nix-configs",
-        "rev": "2f5906db5e789a243ef0d3b12dfdb620f3702632",
-        "type": "github"
-      },
-      "original": {
-        "dir": "waybar",
-        "owner": "dev-hayato-shiina",
-        "repo": "nix-configs",
-        "type": "github"
-      }
-    },
     "wrappers": {
-      "inputs": {
-        "nixpkgs": [
-          "alacritty",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1774879171,
-        "narHash": "sha256-a6JZDuBIwQmuEwYM4dziH+WyrpE8HCP8F7JFIn3CNvw=",
-        "owner": "BirdeeHub",
-        "repo": "nix-wrapper-modules",
-        "rev": "bab35ffae25cf6f4e4fdb3c2f7f0ac80966ce737",
-        "type": "github"
-      },
-      "original": {
-        "owner": "BirdeeHub",
-        "repo": "nix-wrapper-modules",
-        "type": "github"
-      }
-    },
-    "wrappers_2": {
-      "inputs": {
-        "nixpkgs": [
-          "niri",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1774879171,
-        "narHash": "sha256-a6JZDuBIwQmuEwYM4dziH+WyrpE8HCP8F7JFIn3CNvw=",
-        "owner": "BirdeeHub",
-        "repo": "nix-wrapper-modules",
-        "rev": "bab35ffae25cf6f4e4fdb3c2f7f0ac80966ce737",
-        "type": "github"
-      },
-      "original": {
-        "owner": "BirdeeHub",
-        "repo": "nix-wrapper-modules",
-        "type": "github"
-      }
-    },
-    "wrappers_3": {
       "inputs": {
         "nixpkgs": [
           "nvim",
@@ -416,48 +301,6 @@
         "owner": "BirdeeHub",
         "repo": "nix-wrapper-modules",
         "rev": "364e0007179fc2c910a6588e8826fd3fd7a45c14",
-        "type": "github"
-      },
-      "original": {
-        "owner": "BirdeeHub",
-        "repo": "nix-wrapper-modules",
-        "type": "github"
-      }
-    },
-    "wrappers_4": {
-      "inputs": {
-        "nixpkgs": [
-          "waybar",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1774879171,
-        "narHash": "sha256-a6JZDuBIwQmuEwYM4dziH+WyrpE8HCP8F7JFIn3CNvw=",
-        "owner": "BirdeeHub",
-        "repo": "nix-wrapper-modules",
-        "rev": "bab35ffae25cf6f4e4fdb3c2f7f0ac80966ce737",
-        "type": "github"
-      },
-      "original": {
-        "owner": "BirdeeHub",
-        "repo": "nix-wrapper-modules",
-        "type": "github"
-      }
-    },
-    "wrappers_5": {
-      "inputs": {
-        "nixpkgs": [
-          "zsh",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1774879171,
-        "narHash": "sha256-a6JZDuBIwQmuEwYM4dziH+WyrpE8HCP8F7JFIn3CNvw=",
-        "owner": "BirdeeHub",
-        "repo": "nix-wrapper-modules",
-        "rev": "bab35ffae25cf6f4e4fdb3c2f7f0ac80966ce737",
         "type": "github"
       },
       "original": {
@@ -484,29 +327,6 @@
       "original": {
         "owner": "dj95",
         "repo": "zjstatus",
-        "type": "github"
-      }
-    },
-    "zsh": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ],
-        "wrappers": "wrappers_5"
-      },
-      "locked": {
-        "dir": "zsh",
-        "lastModified": 1775262440,
-        "narHash": "sha256-6Q90zAPfo9uYsk3/qaJnJ13R/VI8RFqZil+zCSNQgxQ=",
-        "owner": "dev-hayato-shiina",
-        "repo": "nix-configs",
-        "rev": "2f5906db5e789a243ef0d3b12dfdb620f3702632",
-        "type": "github"
-      },
-      "original": {
-        "dir": "zsh",
-        "owner": "dev-hayato-shiina",
-        "repo": "nix-configs",
         "type": "github"
       }
     }
