@@ -27,6 +27,11 @@ window-rule {
   match app-id="Alacritty"
   open-maximized true
   draw-border-with-background false
+  // blur 設定 (wip/branch PR #3483)
+  background-effect {
+    blur true
+    xray false
+  }
 }
 
 binds {

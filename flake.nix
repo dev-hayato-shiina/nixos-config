@@ -30,6 +30,10 @@
     #   url = "github:dev-hayato-shiina/nix-configs?dir=zsh";
     #   inputs.nixpkgs.follows = "nixpkgs";
     # };
+    niri-wip = {
+      url = "github:niri-wm/niri/wip/branch";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
