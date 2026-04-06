@@ -24,7 +24,7 @@
           "custom/bitwarden" # Bitwarden
           "custom/chrome" # Google Chrome
           "custom/discord" # Discord
-          "custom/alacritty" # Aracritty
+          "custom/alacritty" # Alacritty
         ];
 
         # 中央: 時計を表示する
@@ -37,7 +37,6 @@
           "temperature" # CPU 温度
           "cpu" # CPU 使用率
           "memory" # メモリ使用率
-          "network" # ネットワーク接続状態
           "pulseaudio" # 音量
           "backlight" # 画面輝度
           "keyboard-state" # NumLock / CapsLock 状態
@@ -75,11 +74,11 @@
           tooltip-format = "Discord";
         };
 
-        # Aracritty
+        # Alacritty
         "custom/alacritty" = {
           format = "🖥️";
           on-click = "${pkgs.alacritty}/bin/alacritty";
-          tooltip-format = "Aracritty";
+          tooltip-format = "Alacritty";
         };
 
         # 電源ボタン: クリックで電源メニュースクリプトを実行する
@@ -159,7 +158,7 @@
 
         # システムトレイ（常駐アプリのアイコン表示領域）
         tray = {
-          spacing = 10; # アイコン間の余白（px）
+          spacing = 15; # アイコン間の余白（px）
         };
 
         # 時計: 日本語フォーマットで日付・時刻を表示し、ツールチップにカレンダーを表示する
@@ -231,16 +230,6 @@
         # 2 本目のバッテリー（BAT2）を表示する
         "battery#bat2" = {
           bat = "BAT2";
-        };
-
-        # ネットワーク接続状態を表示する
-        network = {
-          format-wifi = "{essid} ({signalStrength}%) "; # Wi-Fi 接続時
-          format-ethernet = " {ifname}"; # 有線接続時
-          tooltip-format = " {ifname} via {gwaddr}"; # ツールチップ
-          format-linked = " {ifname} (No IP)"; # リンクあり・IP なし
-          format-disconnected = "Disconnected ⚠ {ifname}"; # 未接続
-          format-alt = " {ifname}: {ipaddr}/{cidr}"; # IP アドレス表示（代替フォーマット）
         };
 
         # 音量を表示する（クリックで pavucontrol、右クリックで pw-top を起動する）
