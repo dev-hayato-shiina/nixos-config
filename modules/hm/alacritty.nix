@@ -3,11 +3,6 @@
   programs.alacritty = {
     enable = true;
     settings = {
-      # 起動時に zsh 経由で Zellij(ターミナルマルチプレクサ) を自動起動
-      terminal.shell = {
-        program = "${pkgs.zsh}/bin/zsh";
-      };
-
       window = {
         decorations = "None"; # タイトルバーやボーダーなどのウィンドウ装飾を非表示にする
         dynamic_padding = true; # ウィンドウサイズに応じてパディングを動的に調整する
@@ -15,6 +10,7 @@
           x = 5; # 左右の内側余白（px）
           y = 5; # 上下の内側余白（px）
         };
+        opacity = 0.85;
       };
 
       font = {

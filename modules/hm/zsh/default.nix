@@ -23,9 +23,17 @@
       "......" = "cd ../../..";
       "........" = "cd ../../../..";
 
+      c = "clear";
+
       rebuild = ''sudo nixos-rebuild switch --flake "path:/etc/nixos#agate"'';
 
+      update = "cd /etc/nixos && nix flake update";
+
       gc-clear = "sudo nix-collect-garbage -d";
+
+      claude-monitor = "claude-monitor --plan pro --time-format 24h --timezone Asia/Tokyo --theme dark";
+
+      claude-code-monitor = "claude-code-monitor --plan pro --time-format 24h --timezone Asia/Tokyo --theme dark";
 
       grep = "rg"; # grep を ripgrep に置き換える
 
