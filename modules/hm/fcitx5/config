@@ -1,2 +1,8 @@
 [Hotkey/EnumerateGroup]
 0=Control+space
+
+[Behavior]
+# Share Input State
+ShareInputState=No
+# Show preedit in application
+PreeditEnabledByDefault=True
