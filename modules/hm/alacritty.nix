@@ -21,7 +21,7 @@
       # カラーテーマ(Tokyo Night Moon ベース)
       colors = {
         primary = {
-          background = "#282c34"; # 背景色
+          background = "#141820"; # 背景色
           foreground = "#c8d3f5"; # 前景色(通常テキスト)
         };
         normal = {
