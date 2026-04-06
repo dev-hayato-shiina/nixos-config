@@ -26,6 +26,23 @@ in
 
   xdg.configFile."zellij/layouts/default.kdl".text = ''
     layout {
+        tab {
+            pane split_direction="Vertical" {
+                pane split_direction="Horizontal" size="70%" {
+                    pane size="80%"
+                    pane size="20%"
+                }
+                pane size="30%"
+            }
+            floating_panes {
+                pane {
+                    x "10%"
+                    y "10%"
+                    width "80%"
+                    height "80%"
+                }
+            }
+        }
         default_tab_template {
             pane size=1 borderless=true {
                 plugin location="file://${pkgs.zjstatus}/bin/zjstatus.wasm" {
