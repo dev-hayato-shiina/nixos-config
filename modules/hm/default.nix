@@ -11,6 +11,7 @@
     ./alacritty.nix
     ./bitwarden.nix
     ./chrome.nix
+    ./claude-code.nix
     ./cursor.nix
     ./git.nix
     ./helix.nix
