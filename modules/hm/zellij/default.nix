@@ -24,6 +24,7 @@ in
     source = ./config.kdl;
   };
 
+  # Creating a Layout: https://zellij.dev/documentation/creating-a-layout.html
   xdg.configFile."zellij/layouts/default.kdl".text = ''
     layout {
         tab {
