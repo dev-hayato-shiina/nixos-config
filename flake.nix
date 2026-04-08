@@ -10,6 +10,7 @@
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     sops-nix.url = "github:Mic92/sops-nix";
     zjstatus.url = "github:dj95/zjstatus";
+    zjstatus-hints.url = "github:b0o/zjstatus-hints";
     # alacritty = {
     #   url = "github:dev-hayato-shiina/nix-configs?dir=alacritty";
     #   inputs.nixpkgs.follows = "nixpkgs";
