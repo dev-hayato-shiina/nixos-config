@@ -1,8 +1,8 @@
 // Options: https://zellij.dev/documentation/options.html
-on_force_close "detach" // "detach" (Default) | "quit"
-simplified_ui false // true | false (Default)
+on_force_close "quit" // "detach" (Default) | "quit"
+simplified_ui true // true | false (Default)
 default_shell "zsh" // Default: $SHELL
-pane_frames false // true (Default) | false
+pane_frames true // true (Default) | false
 // Themes: https://zellij.dev/documentation/themes.html
 theme "nord" // Default: "default"
 themes {
@@ -130,7 +130,7 @@ scroll_buffer_size 1000 // Default value: 1000
 copy_command "wl-copy" // wayland
 // copy_command "pbcopy" // osx
 // copy_clipboard "system" // "system" (Default) | "primary"
-copy_on_select true // true (Default) | false
+copy_on_select false // true (Default) | false
 // scrollback_editor "/usr/bin/vim" // Default: $EDITOR or $VISUAL
 mirror_session false // true | false (Default)
 // layout_dir "/path/to/my/layout_dir"
