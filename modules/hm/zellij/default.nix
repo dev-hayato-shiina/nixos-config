@@ -21,6 +21,7 @@ in
 
   xdg.configFile."zellij/config.kdl" = {
     force = true;
+    source = ./config.kdl;
     # text = (builtins.readFile ./config.kdl) + ''
     #
     #   plugins {
