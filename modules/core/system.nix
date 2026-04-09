@@ -50,6 +50,10 @@
     direnv # Nix を使ってツールチェーン管理しているプロジェクトで使用
     fzf # modules/wrap/zsh.nix, modules/wrap/neovim.nix で使用
     ripgrep # modules/wrap/zsh.nix, modules/wrap/neovim.nix で使用
+    eza # ls の代替
+    bat # cat の代替
+    fd # find の代替
+    zoxide # cd の代替
     # vim-full # Vim(全機能版)
     vim
     wl-clipboard # Wayland向けクリップボードユーティリティ(wl-copy/wl-paste)
