@@ -8,8 +8,7 @@
       enable = true; # オーディオサーバーに PipeWire を使用する
       pulse.enable = true; # PulseAudio 互換レイヤーを有効化する
       jack.enable = true; # JACK アプリケーションのサポートを有効化する
-      wireplumber.enable = true;
-      alsa = {
+alsa = {
         enable = true; # ALSA アプリケーションのサポートを有効化する
         support32Bit = true; # 32bit ALSA アプリケーション（Wine など）のサポートを有効化する
       };

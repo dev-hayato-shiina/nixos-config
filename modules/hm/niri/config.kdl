@@ -6,6 +6,18 @@ environment {
   DISPLAY ":1"
 }
 
+input {
+  keyboard {
+    xkb {
+      layout "jp"
+    }
+  }
+}
+
+hotkey-overlay {
+  skip-at-startup
+}
+
 prefer-no-csd
 layout {
     gaps 5
@@ -35,50 +47,32 @@ window-rule {
 }
 
 binds {
-  Mod+Return {
-    spawn "alacritty"
-  }
-  Mod+Q {
-    close-window
-  }
-
-  // プリセットサイズに切り替える（1/3 → 1/2 → 2/3 をトグル）
-  Mod+R { switch-preset-column-width; }
-
-  // ウィンドウを画面いっぱいに広げる
-  Mod+F { maximize-column; }
-
+  Mod+Q { close-window; } // ウィンドウを閉じる
+  Mod+R { switch-preset-column-width; } // プリセットサイズに切り替える(1/3 → 1/2 → 2/3 をトグル)
+  Mod+F { maximize-column; } // ウィンドウを画面いっぱいに広げる
   // フォーカス移動
   Mod+H { focus-column-left; }
   Mod+L { focus-column-right; }
   Mod+J { focus-window-down; }
   Mod+K { focus-window-up; }
-
   // ウィンドウを移動
   Mod+Shift+H { move-column-left; }
   Mod+Shift+L { move-column-right; }
   Mod+Shift+J { move-window-down; }
   Mod+Shift+K { move-window-up; }
+  Mod+Return { spawn "alacritty"; } // Alacritty を起動
+  Mod+N { spawn "swaync-client" "-t" "-sw"; } // 通知ステーションを開閉
+  Mod+Escape { spawn "swaylock" "-f"; } // swaylock
+  Alt+Escape { spawn "sh" "-c" "swaylock -f & systemctl suspend"; } // swaylock + サスペンド
+  Mod+C { spawn "screenshot" "--copy"; }
+  Mod+P { spawn "screenshot" "--save"; }
+  Mod+Shift+P { spawn "screenshot" "--swappy"; }
 }
 
 workspace "main"
 
+// 起動直後にロック画面を表示 (swayidle は systemd ユーザーサービスとして自動起動)
+spawn-at-startup "swaylock" "-f"
 spawn-at-startup "swaybg" "-i" "/home/hayato-shiina/wallpaper.jpg" "-m" "fill"
 spawn-at-startup "waybar"
-spawn-at-startup "alacritty"
-
-spawn-at-startup "google-chrome-stable" \
-  "https://claude.ai" \
-  "https://x.com" \
-  "https://qiita.com" \
-  "https://zenn.dev"
-
-window-rule {
-  match at-startup=true app-id=r#"^Alacritty$"#
-  open-on-workspace "main"
-}
-
-window-rule {
-  match at-startup=true app-id=r#"^google-chrome$"#
-  open-on-workspace "main"
-}
+spawn-at-startup "swaync"

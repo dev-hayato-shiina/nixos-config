@@ -3,6 +3,7 @@
   imports = [
     ./fcitx5
     ./niri
+    ./swaync
     ./vim
     ./wallpaper
     ./waybar
@@ -15,10 +16,13 @@
     ./cursor.nix
     ./git.nix
     ./helix.nix
+    ./swaylock.nix
+    ./swayidle.nix
     ./swaybg.nix
     ./vscode.nix
     ./waybar.nix
     ./wofi.nix
     ./zed-editor.nix
+    ./../../scripts/scripts.nix
   ];
 }

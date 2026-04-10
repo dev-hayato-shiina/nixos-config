@@ -57,6 +57,10 @@
     # vim-full # Vim(全機能版)
     vim
     wl-clipboard # Wayland向けクリップボードユーティリティ(wl-copy/wl-paste)
+    wf-recorder
+    gimp
+    obs-studio
+    swappy # snapshot editing tool
 
     # helix
     # vscode.fhs
