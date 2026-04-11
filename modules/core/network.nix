@@ -5,6 +5,8 @@
   networking = {
     hostName = "${host}";
     networkmanager.enable = true;
+    # DHCPから受け取ったDNSを無視
+    networkmanager.dns = "none";
     nameservers = [
       "1.1.1.1"
       "8.8.8.8"
