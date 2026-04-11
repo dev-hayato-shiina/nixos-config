@@ -83,11 +83,42 @@ tooltip label {
 #idle_inhibitor,
 #scratchpad,
 #mpd,
-#custom-power {
+#custom-power,
+#custom-launcher,
+#custom-bitwarden {
   margin: 2px;
   padding-left: 4px;
   padding-right: 4px;
   color: #cccccc;
+}
+
+#custom-chrome {
+  margin: 2px;
+  padding-left: 4px;
+  padding-right: 4px;
+  color: #cccccc;
+  font-size: 14px;
+}
+
+#custom-discord {
+  margin: 2px;
+  padding-right: 4px;
+  color: #cccccc;
+  font-size: 15px;
+}
+
+#custom-alacritty {
+  margin: 2px;
+  padding-left: 4px;
+  padding-right: 4px;
+  color: #cccccc;
+  font-size: 18px;
+}
+
+#custom-obs {
+  padding-right: 4px;
+  color: #cccccc;
+  font-size: 24px;
 }
 
 .modules-left > widget:first-child > #workspaces {
@@ -99,7 +130,7 @@ tooltip label {
 }
 
 #clock {
-  font-size: 14px;
+  font-size: 15px;
 }
 
 #battery icon {

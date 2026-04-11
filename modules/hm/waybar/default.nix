@@ -84,7 +84,7 @@
 
         # OBS Studio
         "custom/obs" = {
-          format = "󰑋";
+          "format" = "";
           on-click = "${pkgs.obs-studio}/bin/obs-studio";
           tooltip-format = "OBS Studio";
         };
@@ -171,9 +171,9 @@
 
         # 時計: 日本語フォーマットで日付・時刻を表示し、ツールチップにカレンダーを表示する
         clock = {
-          format = "{:%Y/%-m/%-d(%a) %H:%M:%S}";
+          format = "{:%Y/%m/%d(%a) %H:%M}";
           locale = "en_US.UTF-8";
-          tooltip-format = "<big>{:%Y/%m}</big>\n<tt><small>{calendar}</small></tt>";
+          tooltip-format = "<tt><small>{calendar}</small></tt>";
         };
 
         # CPU 使用率をアイコン付きで表示する
