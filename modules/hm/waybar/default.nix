@@ -25,6 +25,7 @@
           "custom/chrome" # Google Chrome
           "custom/discord" # Discord
           "custom/alacritty" # Alacritty
+          "custom/obs" # OBS Studio
         ];
 
         # 中央: 時計を表示する
@@ -40,45 +41,52 @@
           "pulseaudio" # 音量
           "backlight" # 画面輝度
           "keyboard-state" # NumLock / CapsLock 状態
+          "tray" # システムトレイ
           "battery" # バッテリー残量（BAT1）
           "battery#bat2" # バッテリー残量（BAT2）
-          "tray" # システムトレイ
           "custom/power" # 電源メニュー
         ];
 
         # アプリランチャーボタン: クリックで Wofi（drun モード）を起動する
         "custom/launcher" = {
-          format = "🔍";
+          format = "";
           on-click = "${pkgs.wofi}/bin/wofi --show drun";
-          tooltip = false;
+          tooltip-format = "Wofi";
         };
 
         # Bitwarden ボタン: クリックで Bitwarden デスクトップアプリを起動する
         "custom/bitwarden" = {
-          format = "🔐";
+          format = "";
           on-click = "${pkgs.bitwarden-desktop}/bin/bitwarden";
           tooltip-format = "Bitwarden";
         };
 
         # Chrome ボタン: クリックで Google Chrome を起動する
         "custom/chrome" = {
-          format = "🌐";
+          format = "";
           on-click = "${pkgs.google-chrome}/bin/google-chrome-stable";
           tooltip-format = "Chrome";
         };
 
         # Discord ボタン: クリックで起動通知を表示しつつ DISPLAY=:1（XWayland）で Discord を起動する
         "custom/discord" = {
-          format = "💬";
+          format = "";
           on-click = "env DISPLAY=:1 TZ=Asia/Tokyo ${pkgs.flatpak}/bin/flatpak run com.discordapp.Discord --env=TZ=Asia/Tokyo";
           tooltip-format = "Discord";
         };
 
         # Alacritty
         "custom/alacritty" = {
-          format = "🖥️";
+          format = "";
           on-click = "${pkgs.alacritty}/bin/alacritty";
           tooltip-format = "Alacritty";
+        };
+
+        # OBS Studio
+        "custom/obs" = {
+          format = "󰑋";
+          on-click = "${pkgs.obs-studio}/bin/obs-studio";
+          tooltip-format = "OBS Studio";
         };
 
         # 電源ボタン: クリックで電源メニュースクリプトを実行する
@@ -163,9 +171,9 @@
 
         # 時計: 日本語フォーマットで日付・時刻を表示し、ツールチップにカレンダーを表示する
         clock = {
-          format = "{:%Y年%m月%d日(%a) %H:%M}";
-          locale = "ja_JP.UTF-8";
-          tooltip-format = "<big>{:%Y年%m月}</big>\n<tt><small>{calendar}</small></tt>";
+          format = "{:%Y/%-m/%-d(%a) %H:%M:%S}";
+          locale = "en_US.UTF-8";
+          tooltip-format = "<big>{:%Y/%m}</big>\n<tt><small>{calendar}</small></tt>";
         };
 
         # CPU 使用率をアイコン付きで表示する

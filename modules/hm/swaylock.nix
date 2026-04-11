@@ -1,8 +1,13 @@
 { pkgs, ... }:
+let
+  swaylockWrapped = pkgs.writeShellScriptBin "swaylock" ''
+    LC_TIME=C exec ${pkgs.swaylock-effects}/bin/swaylock "$@"
+  '';
+in
 {
   programs.swaylock = {
     enable = true;
-    package = pkgs.swaylock-effects;
+    package = swaylockWrapped;
     settings = {
       disable-caps-lock-text = true;
       ignore-empty-password = true;
@@ -11,7 +16,6 @@
       timestr = "%H:%M:%S";
       datestr = "%Y/%-m/%-d(%a)";
       image = "/home/hayato-shiina/wallpaper.jpg";
-      fade-in = 0.2;
       effect-blur = "20x2";
       effect-scale = 0.3;
       indicator = true;
