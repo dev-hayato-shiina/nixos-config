@@ -46,15 +46,6 @@ window-rule {
   }
 }
 
-layer-rule {
-  match namespace="waybar"
-  // blur 設定 (wip/branch PR #3483)
-  background-effect {
-    blur true
-    xray false
-  }
-}
-
 binds {
   Mod+Q { close-window; } // ウィンドウを閉じる
   Mod+R { switch-preset-column-width; } // プリセットサイズに切り替える(1/3 → 1/2 → 2/3 をトグル)
