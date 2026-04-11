@@ -11,6 +11,7 @@
       timestr = "%H:%M:%S";
       datestr = "%Y/%-m/%-d(%a)";
       screenshots = true;
+      image = "/home/hayato-shiina/wallpaper.jpg";
       fade-in = 0.2;
       effect-blur = "20x2";
       effect-scale = 0.3;
