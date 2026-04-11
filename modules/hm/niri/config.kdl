@@ -62,7 +62,7 @@ binds {
   Mod+Shift+K { move-window-up; }
   Mod+Return { spawn "alacritty"; } // Alacritty を起動
   Mod+N { spawn "swaync-client" "-t" "-sw"; } // 通知ステーションを開閉
-  Mod+Escape { spawn "swaylock" "-f"; } // swaylock
+  Mod+Escape { spawn "swaylock"; } // swaylock
   Alt+Escape { spawn "sh" "-c" "swaylock -f & systemctl suspend"; } // swaylock + サスペンド
   Mod+C { spawn "screenshot" "--copy"; }
   Mod+P { spawn "screenshot" "--save"; }
