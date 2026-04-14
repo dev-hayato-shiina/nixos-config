@@ -14,7 +14,7 @@ set title                     " タイトルを表示
 
 set background=dark           " 背景色を暗く設定する
 set termguicolors             " 24ビットRGBカラーを有効にする
-colorscheme elflord           " カラースキームを設定する
+colorscheme evening           " カラースキームを設定する
 
 " 背景透過(順序を変えると効かなくなるので注意)
 augroup transparent

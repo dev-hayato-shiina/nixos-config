@@ -17,7 +17,7 @@
 
     gvfs.enable = true;
 
-    gnome.tinysparql.enable = true;
+    gnome.gnome-keyring.enable = true;
 
     fstrim.enable = true;
     fwupd.enable = true;
