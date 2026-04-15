@@ -24,6 +24,14 @@
           "!fallback-x11"
         ];
       };
+      # Discord は XWayland(xwayland-satellite) 経由で X11 で起動するため X11 を許可する
+      "com.discordapp.Discord" = {
+        Context.sockets = [
+          "x11"
+          "!wayland"
+          "!fallback-x11"
+        ];
+      };
     };
   };
   programs.xwayland.enable = true;
