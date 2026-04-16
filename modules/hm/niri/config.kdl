@@ -75,4 +75,4 @@ workspace "main"
 spawn-at-startup "swaylock" "-f"
 spawn-at-startup "swaybg" "-i" "/home/hayato-shiina/wallpaper.jpg" "-m" "fill"
 spawn-at-startup "waybar"
-spawn-at-startup "swaync"
+// swaync は systemd ユーザーサービスとして自動起動 (modules/hm/swaync/default.nix)

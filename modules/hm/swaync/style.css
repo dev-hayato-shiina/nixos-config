@@ -5,9 +5,9 @@
     --bg-button-hover: #5E5E5E;
     --text-primary: #EBDBB2;
     --text-disabled: #5C554A;
-    --border-color: #928374;
+    --border-color: #32A0FA;
     --priority-low: #EBDBB2;
-    --priority-normal: #83A598;
+    --priority-normal: #11A598;
     --priority-critical: #FB4934;
     --transition-standard: 0.15s ease-in-out;
 }
@@ -43,6 +43,10 @@ scrollbar slider {
     border: none;
     box-shadow: none;
     transition: background var(--transition-standard);
+}
+
+.widget-dnd switch {
+    border-radius: 30px;
 }
 
 /* Close button */
@@ -368,7 +372,7 @@ scrollbar slider {
 }
 
 .widget-dnd switch slider {
-    border-radius: 0px;
+    border-radius: 50%;
 }
 
 .widget-label {
