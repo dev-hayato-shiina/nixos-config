@@ -71,7 +71,9 @@
       "show-per-app-label": false
     },
     "backlight": {
-      "label": "󰃟 "
+      "label": "󰃟 ",
+      "min": 1,
+      "max": 100
     }
   }
 }
