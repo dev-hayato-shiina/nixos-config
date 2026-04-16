@@ -4,15 +4,12 @@
     settings = {
       # Nix store の重複ファイルをハードリンクに置き換えて、ディスク使用量を削減
       auto-optimise-store = true;
-
       # download-buffer-size = 524288000;
-
       # nixコマンドと Flakes を有効化
       experimental-features = [
         "nix-command"
         "flakes"
       ];
-
       # substituters = [
       #   "https://nix-community.cachix.org"
       #   "https://nix-gaming.cachix.org"
@@ -29,15 +26,12 @@
     gc = {
       # ガベージコレクションを自動実行して不要なストアパスを削除
       automatic = true;
-
       # 毎週実行する
       dates = "weekly";
-
       # 7日以上前の世代を削除
       options = "--delete-older-than 7d";
     };
   };
-
   # システム全体で利用可能なパッケージをインストール
   environment.systemPackages = with pkgs; [
     git
@@ -70,10 +64,8 @@
     # parsec-bin # 超低遅延のリモートデスクトップクライアント
     # remmina # RDP / VNC クライアント
   ];
-
   # タイムゾーンを日本標準時(JST, UTC+9)に設定
   time.timeZone = "Asia/Tokyo";
-
   # コンソール(TTY)のキーマップを106キー日本語配列に設定
   console.keyMap = "jp106";
   nixpkgs.config.allowUnfree = true;

@@ -2,7 +2,6 @@
 {
   # システムのデフォルトロケールを日本語UTF-8に設定する
   i18n.defaultLocale = "ja_JP.UTF-8";
-
   # カテゴリごとのロケールを個別に日本語UTF-8に設定する
   i18n.extraLocaleSettings = {
     LC_CTYPE = "ja_JP.UTF-8"; # 文字の分類・変換
@@ -17,7 +16,6 @@
     LC_TIME = "ja_JP.UTF-8"; # 日付・時刻フォーマット
     LC_COLLATE = "ja_JP.UTF-8"; # 文字列のソート順
   };
-
   i18n.inputMethod = {
     enable = true;
     type = "fcitx5";
@@ -29,7 +27,6 @@
       ];
     };
   };
-
   # waylandFrontend = true の場合、GTK/Qt アプリは Wayland の text-input プロトコルを直接使うため
   # GTK_IM_MODULE / QT_IM_MODULE / SDL_IM_MODULE は設定しない（設定するとfcitx5が警告を出す）
   # XMODIFIERS は XWayland アプリ向けに残す

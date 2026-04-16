@@ -3,7 +3,6 @@
   services = {
     # PulseAudio を無効化する（PipeWire と競合するため）
     pulseaudio.enable = false;
-
     pipewire = {
       enable = true; # オーディオサーバーに PipeWire を使用する
       pulse.enable = true; # PulseAudio 互換レイヤーを有効化する
@@ -16,7 +15,6 @@ alsa = {
   };
   hardware.alsa.enablePersistence = true;
   environment.systemPackages = with pkgs; [ alsa-utils ];
-
   # マイク入力のノイズをリアルタイムで除去するアプリ NoiseTorch を有効化する
   programs.noisetorch.enable = true;
 }

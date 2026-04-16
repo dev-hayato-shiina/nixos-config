@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ ... }:
 {
   programs.alacritty = {
     enable = true;
@@ -12,12 +12,10 @@
         };
         opacity = 0.85;
       };
-
       font = {
         size = 12; # フォントサイズ(pt)
         normal.family = "JetBrainsMono Nerd Font"; # 使用するフォント
       };
-
       # カラーテーマ(Tokyo Night Moon ベース)
       colors = {
         primary = {

@@ -1,6 +1,5 @@
 { config, ... }:
 {
-  # Git 基本設定
   programs.git = {
     enable = true;
     settings = {
@@ -8,7 +7,6 @@
       user.email = "dev.hayato.shiina@gmail.com"; # コミット時に使用するメールアドレス
     };
   };
-
   programs.ssh = {
     enable = true;
     enableDefaultConfig = false;
@@ -33,7 +31,6 @@
       };
     };
   };
-
   home.file = {
     ".ssh/dev-hayato-shiina-key.pub" = {
       source = ./../../ssh/dev-hayato-shiina-key.pub;

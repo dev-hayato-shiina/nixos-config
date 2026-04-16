@@ -5,7 +5,6 @@
   environment.systemPackages = with pkgs; [
     xwayland-satellite
   ];
-
   systemd.user.services.xwayland-satellite = {
     description = "Xwayland Satellite";
     wantedBy = [ "graphical-session.target" ];

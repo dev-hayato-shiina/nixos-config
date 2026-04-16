@@ -16,7 +16,6 @@ in
       default = {};
     };
   };
-
   config = lib.mkIf cfg.enable {
     sops = {
       defaultSopsFile = cfg.secretsFile;

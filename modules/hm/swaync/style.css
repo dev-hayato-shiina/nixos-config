@@ -5,7 +5,7 @@
     --bg-button-hover: #5E5E5E;
     --text-primary: #EBDBB2;
     --text-disabled: #5C554A;
-    --border-color: #32A0FA;
+    --border-color: #928374;
     --priority-low: #EBDBB2;
     --priority-normal: #11A598;
     --priority-critical: #FB4934;
@@ -39,7 +39,7 @@ scrollbar slider {
 .widget-menubar>.menu-button-bar>.widget-menubar-container button,
 .widget-menubar>revealer button,
 .widget-inhibitors>button {
-    border-radius: 0px;
+    border-radius: 8px;
     border: none;
     box-shadow: none;
     transition: background var(--transition-standard);
@@ -82,7 +82,7 @@ scrollbar slider {
 
 /* Base notification styles */
 .notification-row .notification-background .notification {
-    border-radius:88px;
+    border-radius: 8px;
     border: 1px solid var(--border-color);
     transition: background var(--transition-standard);
     background: var(--bg-primary);
@@ -127,7 +127,7 @@ scrollbar slider {
 /* Notification content */
 .notification-content {
     background: transparent;
-    border-radius: 0px;
+    border-radius: 8px;
     padding: 0;
 }
 
@@ -193,7 +193,7 @@ scrollbar slider {
     color: var(--text-primary);
     caret-color: var(--text-primary);
     border: 1px solid var(--border-color);
-    border-radius: 0px;
+    border-radius: 8px;
 }
 
 .notification-content .inline-reply .inline-reply-button {
@@ -230,7 +230,7 @@ scrollbar slider {
 }
 
 .notification-action>button {
-    border-radius: 0px;
+    border-radius: 8px;
     font-size: 16px;
     padding: 1px;
 }
@@ -386,7 +386,7 @@ scrollbar slider {
 
 .widget-mpris .widget-mpris-player {
     margin: 10px 10px;
-    border-radius: 0px;
+    border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);
     border: 1px solid var(--border-color);
 }
@@ -405,7 +405,7 @@ scrollbar slider {
 }
 
 .widget-mpris .widget-mpris-player .mpris-overlay .widget-mpris-album-art {
-    border-radius: 0px;
+    border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);
     -gtk-icon-size: 50px;
 }
@@ -440,11 +440,11 @@ scrollbar slider {
 .widget-buttons-grid {
     padding: 8px;
     margin: 8px;
-    border-radius: 0px;
+    border-radius: 8px;
 }
 
 .widget-buttons-grid flowboxchild>button {
-    border-radius: 0px;
+    border-radius: 8px;
 }
 
 /* Menubar widget */
@@ -484,13 +484,13 @@ scrollbar slider {
     background-color: var(--bg-secondary);
     padding: 8px 8px 8px 8px;
     margin: 8px 8px 8px 8px;
-    border-radius: 0px;
+    border-radius: 8px;
 }
 
 /* Slider widget */
 .widget-slider {
     padding: 8px;
-    border-radius: 0px;
+    border-radius: 8px;
 }
 
 .widget-slider label {
@@ -500,7 +500,7 @@ scrollbar slider {
 /* Backlight widget */
 .widget-backlight {
     padding: 8px;
-    border-radius: 0px;
+    border-radius: 8px;
     margin-top: -8px;
     margin-bottom: 8px;
 }

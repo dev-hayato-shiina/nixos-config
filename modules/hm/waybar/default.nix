@@ -4,12 +4,9 @@
     font-awesome # アイコンフォント(Waybar のアイコン表示に使用)
     cantarell-fonts # GNOME 標準フォント
   ];
-
   programs.waybar = {
     enable = true;
-
     style = builtins.readFile ./style.css;
-
     settings = [
       {
         layer = "top"; # 他のウィンドウより前面に表示する

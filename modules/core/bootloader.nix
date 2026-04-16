@@ -8,7 +8,6 @@
     };
     # https://github.com/NixOS/nixpkgs/blob/master/pkgs/top-level/linux-kernels.nix
     kernelPackages = pkgs.linuxKernel.packages.linux_zen;
-
     initrd = {
       # initrd（Stage 1）のverboseログを無効化
       verbose = false;
@@ -17,7 +16,6 @@
       # カーネルメッセージが画面に表示されなくなる
       kernelModules = [ "i915" ];
     };
-
     # 起動時のカーネルメッセージを非表示にする
     # ESC キーで元のメッセージを表示可能、起動後は journalctl -b で確認できる
     kernelParams = [
@@ -35,7 +33,6 @@
       # SGX検出をスキップ（起動時の"SGX disabled or unsupported"メッセージを抑制）
       "nosgx"
     ];
-
     plymouth = {
       enable = true;
       theme = "connect";

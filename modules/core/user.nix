@@ -27,7 +27,6 @@ in
     };
     backupFileExtension = "hm-backup";
   };
-
   # ユーザー管理を NixOS の宣言的設定のみに限定
   # | true(デフォルト) の場合、passwdコマンド等による命令的な変更が可能だが
   # | false にすることで設定ファイル外からのユーザー変更を禁止し、冪等性を保証する
@@ -44,7 +43,6 @@ in
     hashedPasswordFile = config.sops.secrets."hayato_shiina_hashed_password".path;
   };
   nix.settings.allowed-users = [ "${username}" ];
-
   myModules.sops = {
     enable = true;
     keyFile = ageKeyFile;
