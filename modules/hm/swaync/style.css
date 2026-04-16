@@ -82,7 +82,7 @@ scrollbar slider {
 
 /* Base notification styles */
 .notification-row .notification-background .notification {
-    border-radius: 0px;
+    border-radius:88px;
     border: 1px solid var(--border-color);
     transition: background var(--transition-standard);
     background: var(--bg-primary);
@@ -293,7 +293,7 @@ scrollbar slider {
 .control-center {
     background: var(--bg-primary);
     color: var(--text-primary);
-    border-radius: 0px;
+    border-radius: 8px;
     border: 2px solid var(--border-color);
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
 }
