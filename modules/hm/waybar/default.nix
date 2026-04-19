@@ -18,6 +18,7 @@
         # 左側: アプリケーション起動ボタンを並べる
         modules-left = [
           "custom/launcher" # アプリランチャー（Wofi）
+          "custom/files" # ファイルピッカー
           "custom/bitwarden" # Bitwarden
           "custom/chrome" # Google Chrome
           "custom/discord" # Discord
@@ -49,6 +50,13 @@
           format = "";
           on-click = "${pkgs.wofi}/bin/wofi --show drun";
           tooltip-format = "Wofi";
+        };
+
+        # ファイルピッカー: クリックで zenity のファイル選択ダイアログを開く
+        "custom/files" = {
+          format = "󰉋";
+          on-click = "${pkgs.zenity}/bin/zenity --file-selection";
+          tooltip-format = "Files";
         };
 
         # Bitwarden ボタン: クリックで Bitwarden デスクトップアプリを起動する
@@ -87,11 +95,12 @@
         };
 
         # 電源ボタン: クリックで電源メニュースクリプトを実行する
-        # "custom/power" = {
-        # format = "⏻";
-        # on-click = "${config.xdg.configHome}/waybar/scripts/powermenu.sh";
-        # tooltip-format = "Power Menu";
-        # };
+        "custom/power" = {
+          format = "⏻";
+          # on-click = "${config.xdg.configHome}/waybar/scripts/powermenu.sh";
+          on-click = "power-menu";
+          tooltip-format = "Power Menu";
+        };
 
         # NumLock / CapsLock のロック状態をアイコンで表示する
         "keyboard-state" = {

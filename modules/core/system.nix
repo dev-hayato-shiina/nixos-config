@@ -55,6 +55,10 @@
     gimp
     obs-studio
     swappy # snapshot editing tool
+    zenity # GTK ファイルピッカーダイアログ
+    grim
+    slurp
+    libnotify # notify-send コマンドを提供（Swaync への通知送信に使用）
 
     # helix
     # vscode.fhs
