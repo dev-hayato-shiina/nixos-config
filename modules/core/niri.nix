@@ -2,9 +2,6 @@
 {
   programs.niri = {
     enable = true;
-    # wip/branch 自身の flake.nix でビルドされたパッケージを使用
-    # (PR #3483 blur がマージされたらこの行を削除する)
-    package = inputs.niri-wip.packages.${pkgs.stdenv.hostPlatform.system}.default;
   };
   services.displayManager.gdm.enable = false;
   # 自動ログイン → niri 起動 → hyprlock (spawn-at-startup) の順に動く
