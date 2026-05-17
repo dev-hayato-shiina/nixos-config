@@ -36,7 +36,7 @@ window-rule {
 }
 
 window-rule {
-  match app-id="Alacritty"
+  match app-id="^Alacritty$"
   open-maximized true
   draw-border-with-background false
   background-effect {
