@@ -45,6 +45,7 @@ swapon /dev/disk/by-label/swap
 nixos-generate-config --root /mnt
 
 rm /mnt/etc/nixos/configuration.nix
+rm /etc/nixos/configuration.nix
 mv /mnt/etc/nixos/hardware-configuration.nix /mnt/etc/
 git clone https://github.com/dev-hayato-shiina/nixos-config.git /mnt/etc/nixos/.
 rm /mnt/etc/nixos/hosts/agate/hardware-configuration.nix
@@ -60,7 +61,7 @@ cd /mnt/etc/nixos
 rm /root/install.sh
 
 # flakeを使ってインストール
-nixos-install --flake .#agate
+# nixos-install --flake .#agate
 
 # シャットダウン
-shutdown -h now
+# shutdown -h now
