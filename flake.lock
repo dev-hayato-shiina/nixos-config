@@ -86,28 +86,6 @@
         "type": "github"
       }
     },
-    "niri-wip": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ],
-        "rust-overlay": "rust-overlay"
-      },
-      "locked": {
-        "lastModified": 1775412875,
-        "narHash": "sha256-nvTnu0tEgvI6wg0jSORls/272RPtxxmVZ7iq7izA2KA=",
-        "owner": "niri-wm",
-        "repo": "niri",
-        "rev": "e0db6df3e1eecb6dd1d034a435dab79cb71d10e3",
-        "type": "github"
-      },
-      "original": {
-        "owner": "niri-wm",
-        "ref": "wip/branch",
-        "repo": "niri",
-        "type": "github"
-      }
-    },
     "nix-flatpak": {
       "locked": {
         "lastModified": 1768656715,
@@ -298,7 +276,6 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
-        "niri-wip": "niri-wip",
         "nix-flatpak": "nix-flatpak",
         "nixpkgs": "nixpkgs",
         "nvim": "nvim",
@@ -308,27 +285,6 @@
       }
     },
     "rust-overlay": {
-      "inputs": {
-        "nixpkgs": [
-          "niri-wip",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1757989933,
-        "narHash": "sha256-9cpKYWWPCFhgwQTww8S94rTXgg8Q8ydFv9fXM6I8xQM=",
-        "owner": "oxalica",
-        "repo": "rust-overlay",
-        "rev": "8249aa3442fb9b45e615a35f39eca2fe5510d7c3",
-        "type": "github"
-      },
-      "original": {
-        "owner": "oxalica",
-        "repo": "rust-overlay",
-        "type": "github"
-      }
-    },
-    "rust-overlay_2": {
       "inputs": {
         "nixpkgs": [
           "zjstatus",
@@ -349,7 +305,7 @@
         "type": "github"
       }
     },
-    "rust-overlay_3": {
+    "rust-overlay_2": {
       "inputs": {
         "nixpkgs": [
           "zjstatus-hints",
@@ -444,7 +400,7 @@
         "crane": "crane",
         "flake-utils": "flake-utils",
         "nixpkgs": "nixpkgs_3",
-        "rust-overlay": "rust-overlay_2"
+        "rust-overlay": "rust-overlay"
       },
       "locked": {
         "lastModified": 1773119656,
@@ -465,7 +421,7 @@
         "crane": "crane_2",
         "flake-utils": "flake-utils_2",
         "nixpkgs": "nixpkgs_4",
-        "rust-overlay": "rust-overlay_3"
+        "rust-overlay": "rust-overlay_2"
       },
       "locked": {
         "lastModified": 1762792674,
