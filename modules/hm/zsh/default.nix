@@ -20,7 +20,8 @@
       "......" = "cd ../../..";
       "........" = "cd ../../../..";
       c = "clear";
-      rebuild = ''sudo nixos-rebuild switch --flake "path:/etc/nixos#agate"'';
+      rebuild-switch = ''sudo nixos-rebuild switch --flake "path:/etc/nixos#agate"'';
+      rebuild-boot = ''sudo nixos-rebuild boot --flake "path:/etc/nixos#agate"'';
       update = "cd /etc/nixos && nix flake update";
       gc-clear = "sudo nix-collect-garbage -d";
       claude-monitor = "claude-monitor --plan pro --time-format 24h --timezone Asia/Tokyo --theme dark";
