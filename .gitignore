@@ -2,4 +2,3 @@
 !/ssh/authorized_keys
 !/ssh/*.pub
 /*.txt
-hardware-configuration.nix
