@@ -145,7 +145,7 @@ jump-label-alphabet = "abcdefghijklmnopqrstuvwxyz" # Default: "abcdefghijklmnopq
 # 行末に表示する診断メッセージの最小レベルを設定する
 # disable: 行末の診断表示を無効にします
 # 有効にする場合は "error"、"warning"、"info"、"hint" などを指定します
-end-of-line-diagnostics = "hint" # Default: "disable"
+end-of-line-diagnostics = "disable" # Default: "disable"
 
 # クリップボード操作に使う仕組みを指定する
 # 使用できる方式はOSや端末環境によって変わります
@@ -344,11 +344,11 @@ git-exclude = true # Default: true
 
 # Helixからフォーカスが外れた際に自動保存を有効にする
 # 端末がフォーカスイベントをサポートしている必要があります
-focus-lost = true # Default: false
+focus-lost = false # Default: false
 
 # 最後に編集してから一定時間が経過したら、自動保存するかどうかを設定する
 # false の場合、時間経過による自動保存は行いません
-after-delay.enable = true # Default: false
+after-delay.enable = false # Default: false
 
 # 自動保存するまでの待ち時間をミリ秒で設定する
 # 3000 の場合、最後に編集してから3秒後に保存します
@@ -445,12 +445,12 @@ supersede-menu = false # Default: false
 # disable: 表示しません
 # 表示したい場合は "error"、"warning"、"info"、"hint" を指定します
 # 挿入モード中は表示されず、カーソル移動後に少し遅れて表示されます
-cursor-line = "hint" # Default: "disable"
+cursor-line = "disable" # Default: "disable"
 
 # カーソル行以外にも、診断メッセージをコード内へ直接表示するかどうかを設定する
 # disable: 表示しません
 # 表示したい場合は "error"、"warning"、"info"、"hint" を指定します
-other-lines = "hint" # Default: "disable"
+other-lines = "disable" # Default: "disable"
 
 # インライン診断メッセージの前に表示する横線の長さを設定する
 # 1 の場合、診断メッセージの前に "─" が1本表示されます
