@@ -1,0 +1,494 @@
+theme = "onedark"
+
+[editor]
+
+# スクロール時に画面端の周囲に表示されるパディングの行数
+scrolloff = 5 # Default: 5
+
+# マウスモードを有効にする
+mouse = false # Default: true
+
+# ヤンク/ペーストに使用されるデフォルトレジスタ
+default-yank-register = '+' # Default: '"'
+
+# ミドルクリックペーストのサポート
+middle-click-paste = false # Default: true
+
+# スクロールホイールのステップごとにスクロールする行数
+scroll-lines = 3 # Default: 3
+
+# 外部コマンドを実行する際に使用するシェル
+shell = ["zsh", "-c"] # Default: Unix: ["sh", "-c"] / Windows: ["cmd", "/C"]
+
+# 行番号表示
+# absolute: 各行の番号を単純に表示する
+# relative: 現在の行からの距離を表示する
+line-number = "absolute" # Default: "absolute"
+
+# カーソルで全ての行をハイライト表示
+cursorline = true # Default: false
+
+# カーソルで全ての列をハイライト表示
+cursorcolumn = false # Default: false
+
+# Helixがコメント内に新しい行を作成した場合に、行コメントトークンを自動的に追加するかどうか
+continue-comments = true # Default: true
+
+# エディタ左側に表示する補助エリアを設定する
+# diagnostics: エラー・警告・ヒントなどの診断表示（ブレークポイントなど、診断以外の表示も含まれることがあります）
+# diff: Git差分
+# line-numbers: 行番号
+# spacer: 見た目を整えるための空白
+gutters = ["diagnostics", "spacer", "line-numbers", "spacer", "diff"] # Default: ["diagnostics", "spacer", "line-numbers", "spacer", "diff"]
+
+# 自動補完のポップアップを自動で有効にする
+auto-completion = true # Default: true
+
+# ファイルパスの補完を有効にする
+# 入力中の文字列がファイルパスとして認識された場合、絶対パスや相対パスに一致するファイル・ディレクトリ候補を表示します
+# 相対パスは、保存済みバッファでは現在開いているファイルの場所、未保存バッファでは現在の作業ディレクトリを基準にします
+path-completion = true # Default: true
+
+# 保存時に自動フォーマットを有効にする
+auto-format = false # Default: true
+
+# アイドルタイマーが作動するまでの、最後のキー入力からの経過時間（ミリ秒）
+idle-timeout = 250 # Default: 250
+
+# 単語の文字を入力してから補完候補が表示されるまでの時間（ミリ秒）
+# 5に設定するとすぐに表示されます
+completion-timeout = 250 # Default: 250
+
+# 選択時に完了項目を即座に適用するかどうか
+preview-completion-insert = true # Default: true
+
+# カーソル下の単語の最小文字数で、オートコンプリートをトリガーする
+completion-trigger-len = 2 # Default: 2
+
+# 補完確定時に、単語全体を置き換えるかどうかを設定する
+# false の場合は、基本的にカーソルより前の入力部分だけを置き換えます
+completion-replace = false # Default: false
+
+# キー入力後などに表示される補助情報ボックスを有効にする
+# 例: 次に押せるキーの候補や、コマンドの補足情報などを表示します
+auto-info = true # Default: true
+
+# 端末がtrue colorに対応しているかどうかの自動判定を上書きする
+# 通常は false のままで問題ありません
+# 自動判定に失敗して色が正しく表示されない場合だけ true にします
+true-color = true # Default: false
+
+# 端末がundercurlに対応しているかどうかの自動判定を上書きする
+# undercurlは、エラーや警告などを波線風の下線で表示する機能です
+# 通常は false のままで問題ありません
+# 対応端末なのにundercurlが表示されない場合だけ true にします
+undercurl = true # Default: false
+
+# 指定した列に縦線の目安を表示する
+# 例: [80, 120] にすると、80文字目と120文字目にルーラーを表示します
+# 空配列 [] の場合は、ルーラーを表示しません
+rulers = [] # Default: []
+
+# エディタ上部に、開いているバッファの一覧を表示するかどうかを設定する
+# always: 常に表示
+# never: 常に非表示
+# multiple: 複数のバッファを開いているときだけ表示します
+bufferline = "always" # Default: "never"
+
+# モードに応じてモードインジケーターの色を変えるかどうか
+color-modes = true # Default: false
+
+# 1行の目安となる最大文字数を設定する
+# :reflow コマンドや、soft-wrap.wrap-at-text-width が有効な場合の折り返し位置に使われます
+text-width = 120 # Default: 80
+
+# LSPのルートとして扱うディレクトリを指定する
+# パスはワークスペースのルートからの相対パスで書きます
+# 空配列 [] の場合は、追加のLSPルートを指定しません
+workspace-lsp-roots = [] # Default: []
+
+# 新規ファイルで使う改行コードを設定する
+# native: OS標準の改行コードを使います（Windowsでは "crlf"、それ以外の環境では "lf" が使われます）
+# 明示的に指定する場合は、"lf"、"crlf"、"ff"、"cr"、"nel" などを指定できます
+default-line-ending = "native" # Default: "native"
+
+# ファイル保存時に、末尾の改行がなければ自動で追加する
+# POSIX系の慣習では、テキストファイルの末尾には改行があるのが一般的です
+insert-final-newline = true # Default: true
+
+# ファイル保存時に、できるだけ安全な方法で書き込みます
+# 保存中にエディタが落ちてもファイル破損を防ぎやすくなります
+# ただし、一部のファイル監視やホットリロードでは変更検知が不安定になる場合があります
+atomic-save = true # Default: true
+
+# 書き込み時に最後の行末の後に続く行末を自動的に削除するかどうか
+trim-final-newlines = false # Default: false
+
+# 書き込み時に行末の前の空白を自動的に削除するかどうか
+trim-trailing-whitespace = false # Default: false
+
+# ポップアップやメニューの周りに枠線を表示するかどうかを設定する
+# none: 枠線なし
+# all: すべてのポップアップに枠線を表示します
+popup-border = "all" # Default: "none"
+
+# 新しい行を作ったとき、インデントをどう決めるかを設定する
+# simple: 前の行のインデントをコピーします
+# tree-sitter: 構文解析の結果を使ってインデントを決めます
+# hybrid: simple と tree-sitter を組み合わせて判断します
+indent-heuristic = "hybrid" # Default: "hybrid"
+
+# ジャンプ時に使う2文字ラベルの文字を設定する
+# 先頭に近い文字ほど優先して使われます
+jump-label-alphabet = "abcdefghijklmnopqrstuvwxyz" # Default: "abcdefghijklmnopqrstuvwxyz"
+
+# 行末に表示する診断メッセージの最小レベルを設定する
+# disable: 行末の診断表示を無効にします
+# 有効にする場合は "error"、"warning"、"info"、"hint" などを指定します
+end-of-line-diagnostics = "hint" # Default: "disable"
+
+# クリップボード操作に使う仕組みを指定する
+# 使用できる方式はOSや端末環境によって変わります
+# デフォルトは環境に応じて自動で選ばれるため、固定したい場合だけ明示します
+clipboard-provider = "wayland" # Default: プラットフォームおよび環境固有の特性です
+
+# .editorconfig ファイルの設定を読み込むかどうかを設定する
+# true の場合、プロジェクト側のインデント幅や改行コードなどの設定を反映します
+editor-config = true # Default: true
+
+[editor.statusline]
+
+# statusline で使える要素一覧です
+# left / center / right に、ここにある文字列を入れるとステータスラインに表示できます
+
+# mode: 現在のモードを表示します
+# 通常モード、挿入モード、選択モードなどが表示されます
+
+# spinner: LSPが処理中のときに、進行中であることを示すスピナーを表示します
+
+# file-name: 開いているファイルのパスまたは名前を表示します
+
+# file-absolute-path: 開いているファイルの絶対パスを表示します
+
+# file-base-name: 開いているファイル名だけを表示します
+# ディレクトリ部分は表示しません
+
+# file-modification-indicator: ファイルに未保存の変更があるかどうかを表示します
+# 未保存の変更がある場合は [+] が表示されます
+
+# file-encoding: ファイルの文字エンコーディングを表示します
+# UTF-8以外の場合に表示されます
+
+# file-line-ending: ファイルの改行コードを表示します
+# 例: LF / CRLF
+
+# file-indent-style: ファイルのインデント形式を表示します
+# 例: tabs / spaces
+
+# read-only-indicator: ファイルが読み取り専用の場合に [readonly] を表示します
+
+# total-line-numbers: 開いているファイルの総行数を表示します
+
+# file-type: 開いているファイルの種類を表示します
+# 例: rust / javascript / markdown
+
+# diagnostics: 現在のファイルにあるエラーや警告の数を表示します
+
+# workspace-diagnostics: ワークスペース全体にあるエラーや警告の数を表示します
+
+# selections: 現在の選択数を表示します
+# 複数選択している場合に、選択数の確認に使えます
+
+# primary-selection-length: 現在のプライマリ選択範囲の文字数を表示します
+
+# position: 現在のカーソル位置を表示します
+# 例: 行番号:列番号
+
+# position-percentage: 現在のカーソル位置が、ファイル全体のどのあたりかを割合で表示します
+# 例: 50%
+
+# separator: editor.statusline.separator で設定した区切り文字を表示します
+# デフォルトは "│" です
+
+# spacer: 要素の間に空白を入れます
+# 見た目を整えるために使います
+
+# version-control: 現在のGitブランチ名、または detached HEAD のコミットハッシュを表示します
+
+# register: 現在選択されているレジスタを表示します
+
+# ステータスラインの左側に揃えられた要素のリスト
+left = ["mode", "file-name", "read-only-indicator", "file-modification-indicator", "version-control"] # Default: ["mode", "spinner", "file-name", "read-only-indicator", "file-modification-indicator"]
+
+# ステータスラインの中央に揃えられた要素のリスト
+center = [] # Default: []
+
+# ステータスラインの右側に並んだ要素のリスト
+right = ["workspace-diagnostics", "diagnostics", "file-encoding", "file-type", "spinner"] # Default: ["diagnostics", "selections", "register", "position", "file-encoding"]
+
+# ステータスラインの要素を区切るために使用される文字
+separator = "│" # Default: "│"
+
+# mode通常モードの要素に表示されるテキスト
+mode.normal = "NORMAL" # Default: "NOR"
+
+# mode挿入モードの要素に表示されるテキスト
+mode.insert = "INSERT" # Default: "INS"
+
+# mode選択モードの要素に表示されるテキスト
+mode.select = "SELECT" # Default: "SEL"
+
+# 現在のバッファに表示される深刻度の一覧
+diagnostics = ["warning", "error"] # Default: ["warning", "error"]
+
+# ワークスペースに表示される重要度の一覧
+workspace-diagnostics = ["warning", "error"] # Default: ["warning", "error"]
+
+[editor.lsp]
+
+# LSP（言語サービスプロバイダー）との連携を有効にする
+# false に設定すると、言語設定に関係なく言語サーバーが完全に無効になります
+enable = true # Default: true
+
+# ステータス行1の下にLSPwindow/showMessageメッセージを表示する
+display-messages = true # Default: true
+
+# ステータスライン1の下にLSPの進行状況メッセージを表示する
+display-progress-messages = true # Default: false
+
+# 署名ヘルプ（パラメータヒント）の自動ポップアップを有効にする
+auto-signature-help = true # Default: true
+
+# インレイヒントを表示するかどうかを設定する
+# インレイヒントは、型情報・引数名・戻り値などをコード中に補助表示する機能です
+# 言語サーバー側でも有効になっていないと表示されない場合があります
+display-inlay-hints = true # Default: false
+
+# インレイヒントの表示文字数の上限を設定する
+# デフォルトでは未設定なので、上限を指定したい場合だけ有効化します
+# 0は使わず、1以上の数値を指定します
+# inlay-hints-length-limit = 50 # Default: デフォルトでは未設定
+
+# 色の横にカラーサンプルを表示する
+display-color-swatches = true # Default: true
+
+# 関数やメソッドの引数ヒントを表示するときに、その下に説明ドキュメントも表示するかどうかを設定する
+display-signature-help-docs = true # Default: true
+
+# LSPが提供するスニペット補完を有効にする
+# 変更を反映するには、:lsp-restart や :config-reload 後に言語サーバーの再起動が必要になる場合があります
+snippets = true # Default: true
+
+# 参照一覧を表示するときに、定義元の宣言も含めるかどうかを設定する
+# true の場合、参照箇所だけでなく宣言箇所も候補に表示されます
+goto-reference-include-declaration = true # Default: true
+
+[editor.cursor-shape]
+
+# 通常モードでのカーソル形状
+normal = "block" # Default: "block"
+
+# 挿入モードでのカーソル形状
+insert = "block" # Default: "block"
+
+# 選択モードでのカーソル形状
+select = "block" # Default: "block"
+
+[editor.file-picker]
+
+# 隠しファイルを無視する機能を有効にする
+hidden = false # Default: true
+
+# ファイルピッカーや検索で、シンボリックリンクの先も対象にするかどうかを設定する
+# true の場合、シンボリックリンクをリンク先のファイル・ディレクトリとして扱います
+follow-symlinks = true # Default: true
+
+# 同じファイルを指すシンボリックリンクを重複表示しないようにする
+# true の場合、すでに表示済みのファイルを指すリンクはピッカーに表示しません
+deduplicate-links = true # Default: true
+
+# 親ディレクトリから無視ファイルを読み取ることを可能にする
+parents = true # Default: true
+
+# .ignoreファイルの読み取りを有効にする
+ignore = true # Default: true
+
+# .gitignoreファイルの読み取りを有効にする
+git-ignore = true # Default: true
+
+# Gitのグローバル除外設定を読み込むかどうかを設定する
+# true の場合、git config の core.excludesFile で指定された除外ファイルを反映します
+git-global = true # Default: true
+
+# リポジトリ内の .git/info/exclude を読み込むかどうかを設定する
+# true の場合、そのリポジトリ専用の除外ルールを反映します
+git-exclude = true # Default: true
+
+# ファイルピッカーや検索で、どの階層まで再帰的に探索するかを設定する
+# デフォルトでは未設定なので、探索の深さを制限したい場合だけ有効化します
+# max-depth = 25 # Default: デフォルトでは未設定
+
+[editor.auto-pairs]
+
+# 括弧や角括弧などに文字ペアを自動的に挿入できるようにする
+# 単純なブール値、または単一文字ペアの特定のマッピングを指定できます
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'<' = '>'
+"'" = "'"
+'"' = '"'
+'`' = '`'
+
+[editor.auto-save]
+
+# Helixからフォーカスが外れた際に自動保存を有効にする
+# 端末がフォーカスイベントをサポートしている必要があります
+focus-lost = true # Default: false
+
+# 最後に編集してから一定時間が経過したら、自動保存するかどうかを設定する
+# false の場合、時間経過による自動保存は行いません
+after-delay.enable = true # Default: false
+
+# 自動保存するまでの待ち時間をミリ秒で設定する
+# 3000 の場合、最後に編集してから3秒後に保存します
+# after-delay.enable が true の場合に使われます
+after-delay.timeout = 3000 # Default: 3000
+
+[editor.search]
+
+# スマートな大文字小文字区別なしの正規表現検索を有効にする（パターンに大文字が含まれていない限り、大文字小文字を区別しない）
+smart-case = true # Default: true
+
+# 一致する結果がなくなったら検索を終了するかどうか
+wrap-around = true # Default: true
+
+[editor.whitespace]
+
+# 空白文字を画面上に見える記号として表示するかどうかを設定する
+# none: 表示しません
+# all: スペース、タブ、改行などをすべて表示します
+# 種類ごとに表示・非表示を分けたい場合は、[editor.whitespace.render] で個別設定します。
+render = "all" # Default: "none"
+
+# 空白文字を表示するときに使う記号を設定する
+# render が "none" の場合、ここで指定した記号は表示されません
+[editor.whitespace.characters]
+
+# 通常のスペースを表示するときの記号
+space = "·" # Default: "·"
+
+# ノーブレークスペースを表示するときの記号
+nbsp = "⍽" # Default: "⍽"
+
+# 狭いノーブレークスペースを表示するときの記号
+nnbsp = "␣" # Default: "␣"
+
+# タブ文字の先頭に表示する記号
+tab = "→" # Default: "→"
+
+# 改行を表示するときの記号
+newline = "⏎" # Default: "⏎"
+
+# タブ文字の残り幅を埋める記号
+# 例: タブ幅が4の場合、"→···" のように表示されます
+tabpad = "·" # Default: "·"
+
+[editor.indent-guides]
+
+# インデントガイドを表示するかどうか
+render = false # Default: false
+
+# インデントガイドのレンダリングに使用する文字
+character = "│" # Default: "│"
+
+# スキップするインデントレベルの数
+skip-levels = 0 # Default: 0
+
+[editor.soft-wrap]
+
+# 長い行を画面幅に合わせて折り返して表示するかどうかを設定する
+# false の場合、長い行は折り返さず横に続きます
+enable = false # Default: false
+
+# 折り返し時に、行末へどれくらい空白を残すかを設定する
+# 値を大きくすると、単語の途中で折り返されにくくなります
+max-wrap = 20 # Default: 20
+
+# 折り返した行に、元の行のインデントをどこまで引き継ぐかを設定する
+# 値を大きくすると、深いインデントも折り返し行に反映されます
+max-indent-retain = 40 # Default: 40
+
+# 折り返された行の先頭に表示する記号を設定する
+# 空文字 "" にすると、折り返し記号を非表示にできます
+wrap-indicator = "↪" # Default: "↪"
+
+# true の場合、画面幅ではなく text-width の値を基準に折り返す
+# false の場合、エディタの表示幅いっぱいを使って折り返します
+wrap-at-text-width = false # Default: false
+
+[editor.smart-tab]
+
+# Tabキーの動作を賢く切り替えるかどうかを設定する
+# true の場合、カーソルの左側に文字があるときは、タブ文字を挿入せず、構文上のまとまりの末尾へ移動します
+# 左側が空白だけの場合は、通常どおりタブを挿入します
+enable = true # Default: true
+
+# 補完メニューが表示されているときでも、smart-tab の動作を優先するかどうかを設定する
+# false の場合、補完メニュー表示中のTabは候補の移動に使われます
+# true の場合、補完メニュー表示中でもTabは smart-tab として動作します
+supersede-menu = false # Default: false
+
+[editor.inline-diagnostics]
+
+# カーソル行に、診断メッセージをコード内へ直接表示するかどうかを設定する
+# disable: 表示しません
+# 表示したい場合は "error"、"warning"、"info"、"hint" を指定します
+# 挿入モード中は表示されず、カーソル移動後に少し遅れて表示されます
+cursor-line = "hint" # Default: "disable"
+
+# カーソル行以外にも、診断メッセージをコード内へ直接表示するかどうかを設定する
+# disable: 表示しません
+# 表示したい場合は "error"、"warning"、"info"、"hint" を指定します
+other-lines = "hint" # Default: "disable"
+
+# インライン診断メッセージの前に表示する横線の長さを設定する
+# 1 の場合、診断メッセージの前に "─" が1本表示されます
+prefix-len = 1 # Default: 1
+
+# インライン診断メッセージを折り返すときの余白を設定する
+# editor.soft-wrap.max-wrap と同じ考え方の設定です
+max-wrap = 20 # Default: 20
+
+# 1行に表示するインライン診断メッセージの最大数を設定する
+# 同じ行に複数のエラーや警告がある場合、この数まで表示します
+max-diagnostics = 10 # Default: 10
+
+# Key Remapping
+
+[keys.normal]
+0 = "goto_line_start"
+"$" = "goto_line_end"
+G = "goto_last_line"
+H = "goto_previous_buffer"
+L = "goto_next_buffer"
+f = "goto_word"
+V = ["select_mode", "extend_to_line_bounds"]
+C-r = "redo"
+x = "surround_delete"
+
+[keys.normal.d]
+d = ["select_mode", "extend_to_line_bounds", "delete_selection"]
+
+[keys.normal.g]
+g = "goto_file_start"
+
+[keys.select]
+0 = "goto_line_start"
+"$" = "goto_line_end"
+G = "extend_to_last_line"
+H = "goto_previous_buffer"
+L = "goto_next_buffer"
+
+[keys.select.g]
+c = "toggle_comments"
