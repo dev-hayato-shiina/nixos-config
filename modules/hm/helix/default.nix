@@ -12,4 +12,8 @@
     force = true;
     source = ./languages.toml;
   };
+  xdg.configFile."helix/themes/onedark.toml" = {
+    force = true;
+    source = ./onedark.toml;
+  };
 }

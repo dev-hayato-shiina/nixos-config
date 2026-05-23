@@ -224,7 +224,7 @@ left = ["mode", "file-name", "read-only-indicator", "file-modification-indicator
 center = [] # Default: []
 
 # ステータスラインの右側に並んだ要素のリスト
-right = ["workspace-diagnostics", "diagnostics", "file-encoding", "file-type", "spinner"] # Default: ["diagnostics", "selections", "register", "position", "file-encoding"]
+right = ["workspace-diagnostics", "diagnostics", "file-encoding", "file-type", "spinner", "spacer"] # Default: ["diagnostics", "selections", "register", "position", "file-encoding"]
 
 # ステータスラインの要素を区切るために使用される文字
 separator = "│" # Default: "│"
