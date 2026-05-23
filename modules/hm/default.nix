@@ -2,6 +2,7 @@
 {
   imports = [
     ./fcitx5
+    ./helix
     ./niri
     ./swaync
     ./vim
@@ -15,7 +16,6 @@
     ./claude-code.nix
     ./cursor.nix
     ./git.nix
-    ./helix.nix
     ./swaylock.nix
     ./swayidle.nix
     ./swaybg.nix
