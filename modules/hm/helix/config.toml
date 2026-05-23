@@ -483,6 +483,27 @@ d = ["select_mode", "extend_to_line_bounds", "delete_selection"]
 [keys.normal.g]
 g = "goto_file_start"
 
+[keys.normal.space.l]
+g = [
+  ":write-all",
+  ":sh lazygit",
+  ":redraw",
+  ":reload-all"
+]
+
+d = [
+  ":write-all",
+  ":sh lazydocker",
+  ":redraw",
+  ":reload-all"
+]
+
+[keys.insert]
+esc = [
+  ":sh fcitx5-remote -c >/dev/null 2>&1",
+  "normal_mode"
+]
+
 [keys.select]
 0 = "goto_line_start"
 "$" = "goto_line_end"
