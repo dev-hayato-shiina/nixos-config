@@ -15,6 +15,7 @@
     ./chrome.nix
     ./claude-code.nix
     ./cursor.nix
+    ./codex.nix
     ./git.nix
     ./swaylock.nix
     ./swayidle.nix
