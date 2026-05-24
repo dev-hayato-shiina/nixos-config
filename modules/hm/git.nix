@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 {
   programs.git = {
     enable = true;
@@ -6,6 +6,12 @@
       user.name = "dev-hayato-shiina"; # コミット時に使用するユーザー名
       user.email = "dev.hayato.shiina@gmail.com"; # コミット時に使用するメールアドレス
     };
+  };
+  programs.gh = {
+    enable = true;
+    extensions = [
+      pkgs.gh-markdown-preview
+    ];
   };
   programs.ssh = {
     enable = true;

@@ -26,6 +26,7 @@
       gc-clear = "sudo nix-collect-garbage -d";
       claude-monitor = "claude-monitor --plan pro --time-format 24h --timezone Asia/Tokyo --theme dark";
       claude-code-monitor = "claude-code-monitor --plan pro --time-format 24h --timezone Asia/Tokyo --theme dark";
+      mdp = "gh markdown-preview";
       grep = "rg"; # grep を ripgrep に置き換える
       ls = "eza --group-directories-first"; # ls を eza に置き換える
       ll = "eza -l --group-directories-first";
