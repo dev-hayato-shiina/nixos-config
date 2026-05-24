@@ -48,8 +48,8 @@
     bat # cat の代替
     fd # find の代替
     zoxide # cd の代替
-    # vim-full # Vim(全機能版)
-    vim
+    vim-full # Vim(全機能版)
+    # vim
     wl-clipboard # Wayland向けクリップボードユーティリティ(wl-copy/wl-paste)
     wf-recorder
     gimp
@@ -59,7 +59,6 @@
     grim
     slurp
     libnotify # notify-send コマンドを提供（Swaync への通知送信に使用）
-    nvi
 
     # helix
     # vscode.fhs
