@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   programs = {
     # dconf.enable = true;
@@ -10,8 +10,11 @@
     # };
     #
     # appimage.enable = true;
-    #
-    # nix-ld.enable = true;
-    # nix-ld.libraries = with pkgs; [ ];
+    nix-ld.enable = true;
+    nix-ld.libraries = with pkgs; [
+      openssl
+      zlib
+      stdenv.cc.cc
+    ];
   };
 }
