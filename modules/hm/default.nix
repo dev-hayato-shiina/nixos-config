@@ -20,6 +20,7 @@
     ./swaylock.nix
     ./swayidle.nix
     ./swaybg.nix
+    ./vesktop.nix
     ./vscode.nix
     ./waybar.nix
     ./wofi.nix

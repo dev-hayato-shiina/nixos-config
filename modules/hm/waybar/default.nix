@@ -73,10 +73,10 @@
           tooltip-format = "Chrome";
         };
 
-        # Discord ボタン: クリックで起動通知を表示しつつ DISPLAY=:1（XWayland）で Discord を起動する
+        # Discord ボタン: クリックで Vesktop を起動する
         "custom/discord" = {
           format = "";
-          on-click = "env DISPLAY=:1 TZ=Asia/Tokyo ${pkgs.flatpak}/bin/flatpak run com.discordapp.Discord --env=TZ=Asia/Tokyo";
+          on-click = "vesktop";
           tooltip-format = "Discord";
         };
 

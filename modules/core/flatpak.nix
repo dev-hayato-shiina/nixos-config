@@ -5,15 +5,6 @@
     enable = true;
     packages = [
       "com.github.tchx84.Flatseal"
-
-      # Flatpak の Discord をインストール
-      # | Flatpak の Discord を X11(xwayland-satellite) で動かすための設定
-      # | Wayland ネイティブ対応が不安定なため、XWayland 経由で起動する
-      # | 起動エイリアスは以下に記載
-      # | modules/hm/zsh/default.nix
-      # | or
-      # | https://github.com/dev-hayato-shiina/nix-configs/blob/7dbdb369e6bb908a6bf96608f40fed84852eca98/zsh/module.nix#L37
-      "com.discordapp.Discord"
     ];
     overrides = {
       global = {
@@ -21,14 +12,6 @@
         Context.sockets = [
           "wayland"
           "!x11"
-          "!fallback-x11"
-        ];
-      };
-      # Discord は XWayland(xwayland-satellite) 経由で X11 で起動するため X11 を許可する
-      "com.discordapp.Discord" = {
-        Context.sockets = [
-          "x11"
-          "!wayland"
           "!fallback-x11"
         ];
       };

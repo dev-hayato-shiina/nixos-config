@@ -34,9 +34,6 @@
       lt = "eza --tree";
       cat = "bat --paging=never"; # cat を bat に置き換える
       find = "fd"; # find を fd に置き換える
-      # Discord を DISPLAY=:1(xwayland-satellite 経由の X11)で起動する
-      # Flatpak パーミッションの設定は modules/core/flatpak.nix を参照
-      discord = "env DISPLAY=:1 TZ=Asia/Tokyo flatpak run com.discordapp.Discord --env=TZ=Asia/Tokyo";
     };
     # .zshrc の内容を同ディレクトリのファイルから読み込んで適用する
     initContent = builtins.readFile ./.zshrc;

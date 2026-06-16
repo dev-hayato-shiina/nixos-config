@@ -1,11 +1,3 @@
-environment {
-  // X11 アプリを xwayland-satellite 経由で動かすための設定
-  // DISPLAY の値は xwayland-satellite が使用するソケットに合わせること
-  // 確認方法: ls /tmp/.X11-unix/
-  // 関連設定: modules/nix/flatpak/app/discord.nix, modules/nix/system/wm/niri/xwayland-satellite.nix
-  DISPLAY ":1"
-}
-
 input {
   keyboard {
     xkb {
