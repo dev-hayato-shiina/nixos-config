@@ -53,6 +53,7 @@
     wl-clipboard # Wayland向けクリップボードユーティリティ(wl-copy/wl-paste)
     wf-recorder
     gimp
+    inkscape
     obs-studio
     swappy # snapshot editing tool
     zenity # GTK ファイルピッカーダイアログ
