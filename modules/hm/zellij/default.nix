@@ -23,19 +23,19 @@
             pane split_direction="Vertical" {
                 pane split_direction="Horizontal" size="70%" {
                     pane stacked=true size="100%" {
-                        pane name="AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-                        pane name="BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
-                        pane name="CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC"
+                        pane name="1"
+                        pane name="2"
+                        pane name="3"
                     }
                 }
                 pane stacked=true size="30%" {
-                    pane name="DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD"
-                    pane name="EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE"
-                    pane name="FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+                    pane name="4"
+                    pane name="5"
+                    pane name="6"
                 }
             }
             floating_panes {
-                pane name="GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG" {
+                pane name="7" {
                     x "10%"
                     y "10%"
                     width "80%"
