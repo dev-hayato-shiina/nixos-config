@@ -38,7 +38,7 @@ window-rule {
 }
 
 binds {
-  Mod+Shift+h hotkey-overlay-title="ショートカット一覧確認" { show-hotkey-overlay; }
+  Mod+I hotkey-overlay-title="ショートカット一覧確認" { show-hotkey-overlay; }
   Mod+Q hotkey-overlay-title="ウィンドウを閉じる" { close-window; }
   Mod+R hotkey-overlay-title="ウィンドウサイズ切り替え(1/3 → 1/2 → 2/3 をトグル)" { switch-preset-column-width; }
   Mod+F hotkey-overlay-title="ウィンドウを画面いっぱいに広げる" { maximize-column; }
