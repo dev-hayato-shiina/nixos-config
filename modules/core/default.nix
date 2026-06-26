@@ -18,6 +18,7 @@
     ./sops.nix
     ./system.nix
     ./user.nix
+    ./virtualbox.nix
     ./wayland.nix
     ./xwayland-satelite.nix
   ];
