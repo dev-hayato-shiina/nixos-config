@@ -5,11 +5,12 @@
     openssh = {
       enable = true;
       # パスワード認証を無効化して公開鍵認証のみを許可
-      settings.PasswordAuthentication = false;
+      # 検証のため一時有効化
+      settings.PasswordAuthentication = true;
       # root ユーザーによる SSH ログインを禁止
       settings.PermitRootLogin = "no";
-      # SSH 接続に 2222 番ポートを使用
-      ports = [ 2222 ];
+      # SSH 接続に 22222 番ポートを使用
+      ports = [ 22222 ];
     };
     gvfs.enable = true;
     gnome.gnome-keyring.enable = true;
