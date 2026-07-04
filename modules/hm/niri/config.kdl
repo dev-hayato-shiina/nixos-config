@@ -57,7 +57,7 @@ binds {
   Alt+Escape hotkey-overlay-title="スリープ" { spawn "sh" "-c" "swaylock -f & systemctl suspend"; }
   Mod+N hotkey-overlay-title="通知を確認" { spawn "swaync-client" "-t" "-sw"; }
   Mod+T hotkey-overlay-title="Alacrittyを起動" { spawn "alacritty"; }
-  Mod+Return allow-inhibiting=false hotkey-overlay-title="VM向けショートカット抑止を切替" { toggle-keyboard-shortcuts-inhibit; }
+  Mod+Return hotkey-overlay-title="VM向けショートカット抑止を切替" { toggle-keyboard-shortcuts-inhibit; }
 }
 
 workspace "main"
