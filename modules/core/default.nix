@@ -8,6 +8,7 @@
     ./fonts.nix
     # ./hardware.nix
     ./i18n.nix
+    ./libvirt.nix
     ./network.nix
     ./niri.nix
     # ./nixpkgs.nix
