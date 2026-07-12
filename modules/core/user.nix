@@ -31,6 +31,7 @@ in
   # | true(デフォルト) の場合、passwdコマンド等による命令的な変更が可能だが
   # | false にすることで設定ファイル外からのユーザー変更を禁止し、冪等性を保証する
   users.mutableUsers = false;
+  users.groups.epos = {};
   users.users.${username} = {
     isNormalUser = true;
     description = "${username}";
@@ -38,10 +39,14 @@ in
       "wheel"
       "networkmanager"
       "docker"
+      "epos"
     ];
     shell = pkgs.zsh;
     hashedPasswordFile = config.sops.secrets."hayato_shiina_hashed_password".path;
   };
+  services.udev.extraRules = ''
+    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="1395", GROUP="epos", MODE="0660"
+  '';
   nix.settings.allowed-users = [ "${username}" ];
   myModules.sops = {
     enable = true;
