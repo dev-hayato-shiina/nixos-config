@@ -60,6 +60,7 @@
     grim
     slurp
     libnotify # notify-send コマンドを提供（Swaync への通知送信に使用）
+    firefox
 
     # helix
     # vscode.fhs
