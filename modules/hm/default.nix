@@ -11,11 +11,13 @@
     ./zellij
     ./zsh
     ./alacritty.nix
+    ./appflowy.nix
     ./bitwarden.nix
     ./chrome.nix
     ./claude-code.nix
     ./cursor.nix
     ./codex.nix
+    ./flow-control.nix
     ./git.nix
     ./swaylock.nix
     ./swayidle.nix
